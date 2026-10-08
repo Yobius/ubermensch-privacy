@@ -134,10 +134,11 @@
 <p><strong>Option 1: a normal iPhone transfer.</strong> Quick Start, iCloud Backup or a computer backup restores Übermensch’s data together with the rest of the phone. AI models are not transferred; download yours again in Profile → AI.</p>
 <p><strong>Option 2: a data file (no iCloud needed).</strong></p>
 <ol>
-  <li>On the old iPhone: Profile → Privacy &amp; Data → Export → Data file (full copy). Save every file it offers (<code>default.store</code>, plus <code>-wal</code> and <code>-shm</code> if present) to Files, or AirDrop them to the new phone.</li>
-  <li>On the new iPhone: install Übermensch, then Profile → Privacy &amp; Data → Restore → Import data file, and select those files.</li>
+  <li>On the old iPhone: Profile → Privacy &amp; Data → Export → Data file (full copy). One <code>.aar</code> archive holds the database and everything in Documents (journal photos, books, instructions). Save it to Files or AirDrop it.</li>
+  <li>On the new iPhone: install Übermensch, then Profile → Privacy &amp; Data → Restore → Import data file, and pick that archive.</li>
   <li>Fully close the app (swipe it away) and open it again.</li>
 </ol>
+<p><strong>Option 3: the weekly copy.</strong> In Privacy &amp; Data → Copy to a folder, pick a folder in iCloud Drive. Once a week the same archive is written there and the newest three are kept, so a lost phone does not take the record with it.</p>
 <p>The database already on the new phone is set aside, not deleted. Markdown and JSON exports are for reading and archiving; only the data file can be imported back. Apple Health data moves with Apple Health itself.</p>
 
 <h2>Deleting data</h2>
@@ -184,10 +185,11 @@
 <p><strong>Способ 1 — обычный перенос iPhone.</strong> «Быстрое начало», резервная копия в iCloud или на компьютере переносят данные Übermensch вместе со всем телефоном. Модели ИИ не переносятся — скачайте заново в разделе Профиль → ИИ.</p>
 <p><strong>Способ 2 — файл данных (iCloud не нужен).</strong></p>
 <ol>
-  <li>На старом iPhone: Профиль → Приватность и данные → Экспорт → Файл данных (полная копия). Сохраните все предложенные файлы (<code>default.store</code> и, если есть, <code>-wal</code> и <code>-shm</code>) в «Файлы» или отправьте их по AirDrop на новый телефон.</li>
-  <li>На новом iPhone: установите Übermensch, откройте Профиль → Приватность и данные → Восстановить → Импортировать файл данных и выберите эти файлы.</li>
+  <li>На старом iPhone: Профиль → Приватность и данные → Экспорт → Файл данных (полная копия). Один архив <code>.aar</code> содержит базу и всё из «Документов» (фото дневника, книги, инструкции). Сохраните его в «Файлы» или передайте по AirDrop.</li>
+  <li>На новом iPhone: установите Übermensch, откройте Профиль → Приватность и данные → Восстановить → Импортировать файл данных и выберите этот архив.</li>
   <li>Полностью закройте приложение (смахните его) и откройте снова.</li>
 </ol>
+<p><strong>Способ 3 — еженедельная копия.</strong> В разделе «Приватность и данные → Копия в папку» выберите папку в iCloud Drive. Раз в неделю туда записывается тот же архив, хранятся три последние копии — потерянный телефон не унесёт записи с собой.</p>
 <p>База, которая уже была на новом телефоне, откладывается в сторону, а не удаляется. Экспорт в Markdown и JSON — для чтения и архива; обратно импортируется только файл данных. Данные «Здоровья» переезжают вместе с самим «Здоровьем».</p>
 
 <h2>Удаление данных</h2>
