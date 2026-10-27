@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Übermensch — Informativa sulla privacy</title>
+  <style>
+    :root {
+      --paper: #ECE7D9;
+      --ink: #18171C;
+      --rule: rgba(24,23,28,0.18);
+      --muted: rgba(24,23,28,0.55);
+      --accent: #B12B1B;
+      --display: 'Fraunces', Georgia, serif;
+      --serif: 'Newsreader', Georgia, serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.6;
+      padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 56px);
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+    }
+    .updated {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+    h2 {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 56px 0 16px;
+    }
+    h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 32px 0 12px;
+    }
+    p { margin: 0 0 16px; }
+    ul { padding-left: 24px; margin: 0 0 16px; }
+    li { margin-bottom: 8px; }
+    em { font-family: var(--display); font-style: italic; }
+    code, .api {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      background: rgba(24,23,28,0.05);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 56px 0;
+    }
+    .footer {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 56px;
+    }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--rule); }
+    th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .lang { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; margin: -32px 0 48px; }
+    code { word-break: break-all; }
+    @media (max-width: 600px) {
+      .table-wrap tr:first-child { display: none; }
+      .table-wrap tr, .table-wrap td { display: block; }
+      .table-wrap tr { border-top: 1px solid var(--rule); padding: 12px 0; }
+      .table-wrap td { border: 0; padding: 2px 0; }
+      .table-wrap td:first-child { font-weight: 600; }
+      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<div class="eyebrow">§ PRIVACIA</div>
+<h1>Lo specchio è <em>locale.</em></h1>
+<div class="updated">Ultimo aggiornamento: 27 ottobre 2026 · Übermensch 1.0 per iPhone (iOS 27)</div>
+<nav class="lang"><a href="https://yobius.github.io/ubermensch-privacy/">English</a> · <a href="https://yobius.github.io/ubermensch-privacy/#ru">Русский</a> · <a href="support-it.html">Supporto</a></nav>
+
+<article id="it" lang="it">
+
+<p>Übermensch è un’app di self-tracking per iPhone. Conserva ciò che scegli di registrare o importare (dati del corpo, cibo, denaro, attività, voci del diario, check-in quotidiani) e cerca i legami tra questi dati. Tutto ciò che registri è salvato sul tuo iPhone. Non esistono un account Übermensch, un server Übermensch né sistemi di analisi, quindi lo sviluppatore non riceve mai i tuoi dati.</p>
+<p>Questa pagina elenca ogni caso in cui l’app usa la rete, cosa lascia il telefono in ciascun caso e come eliminare tutto.</p>
+
+<h2>In breve</h2>
+<ul>
+  <li>I tuoi dati vivono sul tuo iPhone, nei backup del tuo iPhone e nelle copie che fai tu stesso.</li>
+  <li>Di default l’IA gira sul dispositivo. Il servizio facoltativo Private Cloud Compute di Apple resta disattivato finché non lo attivi.</li>
+  <li>L’app va online solo per ciò che attivi o chiedi tu: per scaricare un modello di IA che hai scelto, per inviare richieste all’IA a Private Cloud Compute se l’hai attivato, per cercare, se hai attivato questa opzione, un codice a barre che il database integrato non conosce e, se hai attivato il meteo, per scaricare il meteo per una posizione arrotondata. A parte questo, all’avvio chiede all’App Store i prezzi di Pro, e iOS può scaricare il modello di riconoscimento vocale di Apple la prima volta che detti. Gli acquisti passano dall’App Store.</li>
+  <li>Nessun account, nessuna pubblicità, nessun tracciamento, nessun SDK di analisi o di segnalazione dei crash. Non vendiamo né condividiamo dati, perché non ne abbiamo.</li>
+</ul>
+
+<h2>Chi siamo</h2>
+<p>Übermensch è un’app di Aleksandr Konorev, sviluppatore indipendente in Ucraina (“noi”). Contatto: <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a>.</p>
+
+<h2>Cosa raccogliamo</h2>
+<p>Nulla, tramite l’app. Non gestiamo alcun server, quindi i tuoi dati non hanno un posto dove andare. Nessun accesso con account, nessuna raccolta di indirizzi email, nessuna telemetria, nessun identificativo pubblicitario. Gli unici dati personali che possiamo ricevere sono quelli che ci invii di tua iniziativa via email (vedi <a href="#it-contact">Contattaci</a>).</p>
+
+<h2>Cosa resta sul tuo iPhone</h2>
+<ul>
+  <li>Voci del diario, check-in quotidiani, umore, sensazioni del corpo, dichiarazioni d’identità, riflessioni e note</li>
+  <li>Attività, abilità e pratiche</li>
+  <li>Voci di cibi e bevande con calorie e nutrienti, ed esercizio fisico</li>
+  <li>Spese, entrate, budget e pagamenti ricorrenti</li>
+  <li>Misure corporee e risultati degli esami che inserisci o importi</li>
+  <li>Voci del ciclo, se usi il monitoraggio del ciclo</li>
+  <li>Foto che alleghi alle voci del diario e momenti che scegli dai Suggerimenti per il diario di Apple</li>
+  <li>Libri importati ed evidenziazioni</li>
+  <li>Le tue conversazioni con l’IA, le sue note (“memoria dell’IA”), osservazioni e ipotesi</li>
+  <li>Integratori, eventi della vita e, se hai attivato queste opzioni, i dati meteo e la durata del giorno</li>
+  <li>Impostazioni</li>
+</ul>
+<p>iOS cifra questi dati a riposo con la sua Protezione dati standard. L’app non sincronizza. I suoi dati sono inclusi nel backup del tuo iPhone (Backup iCloud o backup su computer), se ne fai uno. Quel backup appartiene al tuo Account Apple e noi non possiamo accedervi. I modelli di IA scaricati sono esclusi dai backup. L’app conserva sul dispositivo fino a tre copie di sicurezza settimanali del proprio database, così un database danneggiato può essere recuperato. Anche queste vengono rimosse con “Elimina tutti i dati”.</p>
+<p><strong>Pulizia automatica.</strong> Le trascrizioni delle chat più vecchie di 365 giorni vengono eliminate. Le osservazioni e i suggerimenti che hai ignorato vengono eliminati 60 giorni dopo. Le ipotesi agli atti invece vengono conservate.</p>
+<p><strong>Ricerca di sistema.</strong> Le voci del diario, le osservazioni dell’IA, le guide integrate e quelle che aggiungi tu, i tuoi pasti recenti, le spese e gli integratori, e i tuoi esami di laboratorio vengono aggiunti all’indice Spotlight sul dispositivo, così puoi trovarli nella ricerca dell’iPhone. L’indice resta sul dispositivo e viene svuotato quando elimini tutti i dati. Puoi nascondere i contenuti dell’app dalla ricerca in Impostazioni di iOS → App → Übermensch.</p>
+<p><strong>Fotocamera, microfono e foto.</strong> Codici a barre, scontrini, foto dei pasti, menu, etichette degli integratori, display dei dispositivi di misurazione, screenshot di app bancarie e foto dei referti di laboratorio vengono letti sul dispositivo, e le immagini della fotocamera non lo lasciano mai. La dettatura usa il riconoscimento vocale sul dispositivo: l’audio viene scartato e si salva solo la trascrizione. La prima volta che detti in una lingua, iOS può scaricare il modello di riconoscimento vocale di Apple per quella lingua; quel download proviene da Apple e con esso non vengono inviati né il tuo audio né il tuo testo.</p>
+<p><strong>Le notifiche</strong> sono promemoria locali programmati sul dispositivo, e solo se le attivi.</p>
+<p><strong>Posizione (facoltativa).</strong> In Privacy e dati, sotto Luce del giorno, “Usa la mia posizione una volta” chiede la tua posizione e conserva sul dispositivo solo la sua latitudine, arrotondata a circa un chilometro, per calcolare quanto durano le giornate dove vivi. Il meteo ha un interruttore a parte (Privacy e dati → Contesto → “Il meteo dove sei”): chiede la tua posizione una sola volta e la conserva sul dispositivo, arrotondata a circa dieci chilometri. Mentre l’app è aperta, invia quella posizione arrotondata al servizio meteo di Apple (WeatherKit) al massimo una volta ogni tre ore e conserva sul dispositivo la pressione atmosferica e la temperatura che riceve in risposta. Nulla viene tracciato. “Dimentica la mia posizione” rimuove la prima posizione, e disattivare il meteo rimuove la seconda.</p>
+<p><strong>Calendario (facoltativo).</strong> Se attivi “Carico del calendario” in Privacy e dati → Contesto, l’app conta sul dispositivo le ore occupate nel tuo calendario. Gli eventi vengono letti, mai salvati né scritti.</p>
+<p><strong>Blocco dell’app.</strong> Face ID, Touch ID e il codice vengono verificati da iOS. L’app sa solo se la verifica è riuscita; non vede mai dati biometrici.</p>
+<p><strong>Cartelle che scegli.</strong> La copia settimanale e il diario in Markdown scrivono file in una cartella che scegli in File. La copia settimanale è una copia completa dei dati dell’app, compresi i valori importati da Salute; il diario in Markdown contiene solo le voci del diario. Se scegli una cartella di un fornitore cloud, i file sono soggetti ai termini di quel fornitore, non ai nostri; noi non li vediamo mai. Un estratto conto che importi viene letto una volta: le sue righe vengono salvate come spese ed entrate, e il file stesso non viene conservato.</p>
+
+<h2>App Salute (HealthKit)</h2>
+<p>L’accesso a Salute è facoltativo, e scegli ogni categoria nella schermata dei permessi di Apple. Dopo che hai concesso l’accesso, l’app importa fino a un anno del tuo storico di Salute e lo aggiorna quando apri l’app.</p>
+<h3>Dati letti</h3>
+<p>Passi; allenamenti; frequenza cardiaca a riposo, variabilità della frequenza cardiaca, pressione sanguigna, frequenza respiratoria, VO₂ max, glicemia, temperatura del polso durante il sonno; peso, percentuale di grasso corporeo, circonferenza vita; sonno, comprese le fasi del sonno; minuti di consapevolezza; stato d’animo; numero di bevande alcoliche. Con il monitoraggio del ciclo (richiesto solo per un profilo femminile o quando registri le mestruazioni): flusso mestruale, stato menopausale e sanguinamento dopo la menopausa. Risultati degli esami di laboratorio da Health Records, solo quando li importi, dove Apple offre Health Records.</p>
+<h3>Dati scritti (solo valori che inserisci nell’app)</h3>
+<p>Peso, pressione sanguigna e frequenza cardiaca a riposo; fibre, zuccheri, sodio, caffeina e bevande alcoliche dai pasti che registri; il tuo umore giornaliero come voce di stato d’animo e, con il monitoraggio del ciclo, il flusso mestruale. Quando elimini nell’app una misura corporea, un pasto o un giorno di mestruazioni, viene rimossa anche la copia che l’app aveva scritto in Salute.</p>
+<h3>Regole</h3>
+<ul>
+  <li>I dati di Salute non vengono mai venduti, mai condivisi con terzi e mai usati per pubblicità, marketing o data mining.</li>
+  <li>L’app non invia mai i dati di Salute a noi né ad alcun server proprio e non li sincronizza da nessuna parte. Come il resto dei dati dell’app, i valori importati da Salute fanno parte del backup del tuo iPhone, se ne fai uno, e delle esportazioni e copie che fai tu stesso: le esportazioni in Markdown, in JSON e come file di dati, e la copia settimanale in una cartella che scegli.</li>
+  <li>A parte le copie che fai tu stesso e ciò che chiedi a Siri o a Comandi Rapidi di leggere (il comando rapido “Sonno settimanale” passa loro i dati sul sonno delle tue ultime sette notti, regolati dall’informativa sulla privacy di Apple), i valori derivati da Salute possono lasciare il telefono in un solo modo: il servizio facoltativo Private Cloud Compute. Se lo attivi, una richiesta all’IA a cui risponde può includere valori come sonno, frequenza cardiaca a riposo, umore o fase del ciclo (vedi sotto).</li>
+  <li>Le rilevazioni sono mostrate come “segnali”, non come diagnosi. Übermensch non è un dispositivo medico e non dà consigli medici. Le stime del ciclo non sono un contraccettivo né un test di fertilità.</li>
+</ul>
+
+<h2>IA</h2>
+<p>Scegli l’IA in Profilo → IA. “Auto” usa la prima che è pronta.</p>
+<ul>
+  <li><strong>Apple Intelligence (Apple Foundation Models).</strong> Il modello di Apple, integrato in iOS sugli iPhone che supportano Apple Intelligence. Gira sul dispositivo e l’app non scarica nulla.</li>
+  <li><strong>Übermensch AI.</strong> Il modello dell’app, una versione affinata del modello aperto LFM2.5 2.6B di Liquid AI, disponibile sugli iPhone con 8 GB di memoria insieme al modello LFM2.5 2.6B originale da cui deriva. Quando tocchi “Scarica modello”, il modello che hai scelto viene scaricato una sola volta da Hugging Face (circa 2,9 GB). Da quel momento gira interamente sul dispositivo.</li>
+  <li><strong>Private Cloud Compute (Apple).</strong> Facoltativo e <em>disattivato di default</em>. Una volta attivato, risponde in tre casi: quando lo selezioni; in Auto, quando nessun modello sul dispositivo è pronto; e in Auto, per il resoconto mensile, per il quale viene provato per primo. Ogni volta che risponde, la richiesta viene inviata ai server Private Cloud Compute di Apple. La richiesta è la tua domanda, oppure un’attività in background come un resoconto, una risposta a una voce del diario o l’assegnazione di uno scontrino a una categoria, più i dati che l’app aggiunge come contesto, che possono includere testo del diario, check-in, umore, spese, cibo e valori derivati da Salute. Apple dichiara che questi dati vengono usati solo per rispondere alla richiesta, non vengono conservati e non sono accessibili ad Apple. Noi non li riceviamo mai. Puoi disattivare Private Cloud Compute in qualsiasi momento in Profilo → IA.</li>
+</ul>
+<p>L’IA può anche consultare una libreria di riferimento conservata nell’app: manuali di pubblico dominio su abilità pratiche e primo soccorso, e note sugli stessi argomenti scritte con parole nostre. La ricerca avviene sul dispositivo. Le risposte dell’IA sono informazioni generali, non consigli medici.</p>
+
+<h2>Quando l’app usa la rete</h2>
+<div class="table-wrap"><table>
+  <tr><th>Quando</th><th>Dove</th><th>Cosa viene inviato</th></tr>
+  <tr><td>Tocchi “Scarica modello” per Übermensch AI o per il modello LFM2.5 originale</td><td data-label="Dove">Hugging Face (huggingface.co e i suoi server di download)</td><td data-label="Cosa viene inviato">Una richiesta di file di modello pubblici da <code>Robochopacho/LFM2.5-2.6B-Ubermensch-v1-MLX-8bit</code> (Übermensch AI) o <code>LiquidAI/LFM2.5-2.6B-MLX-8bit</code> (LFM2.5 originale). Come ogni download, rivela il tuo indirizzo IP, la versione dell’app e i file richiesti. Nessun account, nessun identificativo, nessuno dei tuoi dati. I log dei server di Hugging Face sono regolati dalla sua informativa sulla privacy.</td></tr>
+  <tr><td>Private Cloud Compute è attivo e risponde a una richiesta all’IA</td><td data-label="Dove">Apple Private Cloud Compute</td><td data-label="Cosa viene inviato">La richiesta e i dati inclusi come contesto, come descritto sopra.</td></tr>
+  <tr><td>Hai attivato “Cerca online i codici a barre sconosciuti” (Profilo → Privacy e dati → Codici a barre; disattivato di default) e scansioni un codice a barre che non è nel database integrato</td><td data-label="Dove">Open Food Facts (world.openfoodfacts.org)</td><td data-label="Cosa viene inviato">Solo il numero del codice a barre, più il nome e la versione dell’app e l’indirizzo di contatto dello sviluppatore, che Open Food Facts chiede a ogni app di inviare. Il tuo indirizzo IP è visibile come in ogni richiesta. Nessun identificativo, nessuno dei tuoi dati.</td></tr>
+  <tr><td>Il meteo è attivo (Profilo → Privacy e dati → Contesto; disattivato di default)</td><td data-label="Dove">Servizio meteo di Apple (WeatherKit)</td><td data-label="Cosa viene inviato">Una posizione arrotondata a circa dieci chilometri, al massimo una volta ogni tre ore mentre l’app è aperta. Nessun identificativo, nessuno dei tuoi dati.</td></tr>
+  <tr><td>Detti per la prima volta in una lingua</td><td data-label="Dove">Apple</td><td data-label="Cosa viene inviato">iOS scarica il modello di riconoscimento vocale di Apple per quella lingua; il modello funziona sul dispositivo. Nessun audio, nessun testo, nessuno dei tuoi dati.</td></tr>
+  <tr><td>L’app si avvia (chiede all’App Store i prezzi di Pro e se hai già Pro), oppure acquisti, ripristini o gestisci Übermensch Pro</td><td data-label="Dove">App Store di Apple</td><td data-label="Cosa viene inviato">Gestito interamente da Apple. Non vediamo mai la tua carta né il tuo Account Apple; Apple ci fornisce solo report di vendita aggregati.</td></tr>
+  <tr><td>Tocchi “Scrivi allo sviluppatore” o apri un link</td><td data-label="Dove">La tua app Mail o il browser</td><td data-label="Cosa viene inviato">Solo ciò che scegli di inviare.</td></tr>
+</table></div>
+<p id="barcode-it">La ricerca dei codici a barre, la ricerca di cibi ed esercizi, la dettatura e la lettura di scontrini e foto dei pasti funzionano tutte offline, usando dati integrati nell’app. Il database dei codici a barre (USDA FoodData Central e Open Food Facts) è incluso nell’app. Se non scarichi mai un modello, non attivi mai Private Cloud Compute, lasci disattivata la ricerca online dei codici a barre e lasci disattivato il meteo, l’app non effettua alcuna richiesta di rete di sua iniziativa, se non per chiedere all’App Store i prezzi di Pro all’avvio. Inoltre, iOS può scaricare il modello di riconoscimento vocale di Apple la prima volta che detti.</p>
+
+<h2>Acquisti</h2>
+<p>Übermensch Pro si acquista tramite l’App Store con pagamento mensile, annuale (il piano annuale inizia con due settimane gratuite se il tuo Account Apple ne ha diritto) o unico, valido per sempre. Un abbonamento si rinnova finché non lo annulli nelle impostazioni del tuo Account Apple; le apri da Profilo → Übermensch Pro → Gestisci abbonamento. Apple elabora il pagamento secondo la propria informativa sulla privacy. L’app verifica il tuo acquisto o abbonamento sul dispositivo con StoreKit di Apple, e noi non riceviamo alcun dato di pagamento. Per avere Pro su un nuovo iPhone, accedi con lo stesso Account Apple e tocca Ripristina acquisti nell’app.</p>
+
+<h2>Cosa non facciamo</h2>
+<ul>
+  <li>Nessuna pubblicità e nessun SDK pubblicitario.</li>
+  <li>Nessun tracciamento: nessun identificativo pubblicitario, nessun fingerprinting, nessun data broker.</li>
+  <li>Nessun SDK di analisi o di segnalazione dei crash (niente Firebase, Mixpanel, Amplitude, Sentry o simili).</li>
+  <li>Nessun SDK di social network, nessun tracciamento della posizione (una posizione arrotondata per la durata del giorno e per il meteo è l’unico uso della posizione, e solo quando lo attivi), nessun accesso ai contatti.</li>
+  <li>Nessuna vendita o condivisione di dati personali.</li>
+</ul>
+
+<h2>I tuoi controlli</h2>
+<ul>
+  <li><strong>Vedere cosa è salvato:</strong> Profilo → Privacy e dati.</li>
+  <li><strong>Modificare o eliminare una singola voce:</strong> dalla voce stessa.</li>
+  <li><strong>Esportare:</strong> Profilo → Privacy e dati → Esporta, in Markdown, JSON o come file di dati completo; Übermensch Pro aggiunge una scheda dell’anno stampabile (PDF). Le esportazioni lasciano l’app solo quando le condividi.</li>
+  <li><strong>Passare a un nuovo iPhone:</strong> esporta il file di dati, poi sul nuovo telefono vai in Profilo → Privacy e dati → Ripristina → Importa file di dati. Anche un normale trasferimento tra iPhone o il ripristino da un backup porta con sé i dati.</li>
+  <li><strong>Eliminare tutto:</strong> Profilo → Privacy e dati → Elimina tutti i dati. Cancella ogni dato, le foto del diario, i libri e le guide che hai aggiunto, le copie di sicurezza del database dell’app e le sue voci in Spotlight. I modelli di IA scaricati restano; rimuovili in Profilo → IA. Eliminando l’app si rimuovono anche tutti i suoi dati dal dispositivo. Le esportazioni e i backup che hai fatto restano sotto il tuo controllo.</li>
+  <li><strong>Accesso a Salute:</strong> Impostazioni di iOS → Privacy e sicurezza → Salute → Übermensch. I valori che l’app ha scritto in Salute restano in Salute finché non li elimini lì.</li>
+  <li><strong>Private Cloud Compute:</strong> Profilo → IA. <strong>Ricerca online dei codici a barre:</strong> Profilo → Privacy e dati → Codici a barre. <strong>Notifiche:</strong> Impostazioni di iOS → Notifiche → Übermensch.</li>
+</ul>
+
+<h2>I tuoi diritti</h2>
+<p>A seconda di dove vivi (per esempio in base al GDPR, al GDPR del Regno Unito o alla legge della California), hai il diritto di accedere ai tuoi dati personali, di rettificarli e cancellarli e di opporti al loro trattamento. I dati dell’app non arrivano mai a noi, quindi non ne conserviamo nessuno, e puoi esercitare questi diritti direttamente nell’app con i controlli descritti sopra. Se vuoi che un’email che ci hai inviato venga cancellata, chiedilo e la cancelleremo. Puoi anche presentare reclamo all’autorità di protezione dei dati del tuo paese. Non vendiamo né condividiamo informazioni personali.</p>
+
+<h2>Dati sanitari dei consumatori</h2>
+<p>Non raccogliamo, condividiamo né vendiamo dati sanitari dei consumatori. Le informazioni sulla salute che registri vengono elaborate dall’app sul tuo dispositivo. Se attivi Private Cloud Compute, Apple ne elabora la parte pertinente solo per rispondere alla richiesta.</p>
+
+<h2>Minori</h2>
+<p>L’app Übermensch è pensata per gli adulti e non si rivolge ai minori. Non raccogliamo consapevolmente dati personali da nessuno, perché l’app non ha un server su cui raccoglierli.</p>
+
+<h2 id="it-contact">Contattaci</h2>
+<p>Scrivi a <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a>. “Scrivi allo sviluppatore” in Profilo → Info e supporto apre un’email che riporta già la versione dell’app, il modello di iPhone, la versione di iOS, il modello di IA e la lingua dell’app, così possiamo riprodurre un problema. Puoi modificare o rimuovere queste righe prima dell’invio. Non viene allegato nessuno dei tuoi dati. Usiamo la tua email solo per risponderti, su tua richiesta (art. 6, par. 1, lett. b) e f), del GDPR), e la cancelliamo se ce lo chiedi.</p>
+
+<h2>Modifiche</h2>
+<p>Se cambia il modo in cui l’app tratta i dati, questa pagina viene aggiornata con una nuova data, e le modifiche importanti vengono indicate nelle note di rilascio dell’app.</p>
+
+</article>
+
+<div class="footer">© 2026 Aleksandr Konorev · <a href="support-it.html">Supporto</a></div>
+
+</main>
+</body>
+</html>

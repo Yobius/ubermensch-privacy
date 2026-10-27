@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Übermensch — Support</title>
+  <style>
+    :root {
+      --paper: #ECE7D9;
+      --ink: #18171C;
+      --rule: rgba(24,23,28,0.18);
+      --muted: rgba(24,23,28,0.55);
+      --accent: #B12B1B;
+      --display: 'Fraunces', Georgia, serif;
+      --serif: 'Newsreader', Georgia, serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.6;
+      padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 56px);
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 200;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+    }
+    .updated {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+    h2 {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 56px 0 16px;
+    }
+    h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 32px 0 12px;
+    }
+    p { margin: 0 0 16px; }
+    ul { padding-left: 24px; margin: 0 0 16px; }
+    li { margin-bottom: 8px; }
+    em { font-family: var(--display); font-style: italic; }
+    code, .api {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      background: rgba(24,23,28,0.05);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 56px 0;
+    }
+    .footer {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 56px;
+    }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--rule); }
+    th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .lang { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; margin: -32px 0 48px; }
+    ol { padding-left: 24px; margin: 0 0 16px; }
+    code { word-break: break-all; }
+    @media (max-width: 600px) {
+      .table-wrap tr:first-child { display: none; }
+      .table-wrap tr, .table-wrap td { display: block; }
+      .table-wrap tr { border-top: 1px solid var(--rule); padding: 12px 0; }
+      .table-wrap td { border: 0; padding: 2px 0; }
+      .table-wrap td:first-child { font-weight: 600; }
+      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<div class="eyebrow">§ AUXILIUM</div>
+<h1>Support</h1>
+<div class="updated">Übermensch 1.0 · iPhone · iOS 27</div>
+<nav class="lang"><a href="#de">Deutsch</a> · <a href="https://yobius.github.io/ubermensch-privacy/support.html">English</a> · <a href="privacy-policy-de.html">Datenschutzerklärung</a></nav>
+
+<article id="de" lang="de">
+
+<h2>Kontakt</h2>
+<p>Schreib an <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a>. Am schnellsten geht es über Profil → Info &amp; Support → An den Entwickler schreiben: Die E-Mail kommt dann mit App-Version, iPhone-Modell, iOS-Version, KI-Modell und App-Sprache an. Ich lese jede Nachricht und antworte meist innerhalb weniger Tage. Bitte schick mir keine Aufzeichnungen. Ich brauche sie nicht, um zu helfen.</p>
+
+<h2>Welche KI bekommt mein iPhone?</h2>
+<div class="table-wrap"><table>
+  <tr><th>Dein iPhone</th><th>Apple Intelligence</th><th>Übermensch AI</th></tr>
+  <tr><td>iPhone 15 Pro, 15 Pro Max und neuer</td><td data-label="Apple Intelligence">Ja, wenn Apple Intelligence in den iOS-Einstellungen eingeschaltet ist</td><td data-label="Übermensch AI">Ja: ein optionaler, einmaliger Download (etwa 2,9 GB)</td></tr>
+  <tr><td>Andere iPhones mit iOS 27</td><td data-label="Apple Intelligence">Nein</td><td data-label="Übermensch AI">Nein: Dafür sind 8 GB Arbeitsspeicher nötig</td></tr>
+</table></div>
+<p><strong>Private Cloud Compute</strong> ist Apples optionales Cloud-Modell. Es ist standardmäßig aus; du schaltest es unter Profil → KI ein, sofern Apple es anbietet. Wenn es antwortet, gehen die Anfrage (deine Frage oder eine Aufgabe, die die App von sich aus ausführt, etwa ein Rückblick) und die Aufzeichnungen, die es dafür braucht, an die Server von Apple. Die Einzelheiten stehen in der <a href="privacy-policy-de.html">Datenschutzerklärung</a>.</p>
+<p><strong>Ganz ohne KI</strong> funktioniert alles andere weiterhin: Eintragen, Hauptbuch, der Import aus Apple Health, die Statistiken unter Puls → Beobachtungen und der Export. KI-Bildschirme sagen dir, was du einschalten musst.</p>
+<p><strong>Welche soll ich wählen?</strong> Apple Intelligence braucht keinen Download und ist die richtige Voreinstellung, wo es deine Sprache spricht. Übermensch AI, unsere feinabgestimmte Variante des LFM2.5 2.6B von Liquid AI, ist die passende Wahl, wo Apple Intelligence ausgeschaltet ist, nicht angeboten wird oder deine Sprache nicht spricht. Das unveränderte LFM2.5 2.6B, auf dem es basiert, wird daneben angeboten. Lade das Modell über WLAN herunter und sorge für mindestens 3 GB freien Speicherplatz.</p>
+<p><strong>Ich habe ein Modell gewählt, aber der Chat antwortet nicht.</strong> Öffne Profil → KI und prüfe, ob das Modell als geladen angezeigt wird. Falls nicht, schließe den Download ab oder wechsle zu Auto.</p>
+
+<h2>Umzug auf ein neues iPhone</h2>
+<p><strong>Möglichkeit 1: eine normale iPhone-Übertragung.</strong> Schnellstart, iCloud-Backup oder ein Backup auf dem Computer stellt die Daten von Übermensch zusammen mit dem Rest des iPhone wieder her. KI-Modelle werden nicht übertragen; lade dein Modell unter Profil → KI erneut.</p>
+<p><strong>Möglichkeit 2: eine Datendatei (ohne iCloud).</strong></p>
+<ol>
+  <li>Auf dem alten iPhone: Profil → Datenschutz &amp; Daten → Exportieren → Datendatei (vollständige Kopie). Ein <code>.aar</code>-Archiv enthält die Datenbank und alles aus „Dokumente“ (Tagebuchfotos, Bücher, Anleitungen). Speichere es in „Dateien“ oder schick es per AirDrop.</li>
+  <li>Auf dem neuen iPhone: Installiere Übermensch, öffne dann Profil → Datenschutz &amp; Daten → Wiederherstellen → Datendatei importieren und wähle dieses Archiv.</li>
+  <li>Schließe die App ganz (nach oben wegwischen) und öffne sie erneut.</li>
+</ol>
+<p><strong>Möglichkeit 3: die wöchentliche Kopie.</strong> Öffne Datenschutz &amp; Daten → In einen Ordner kopieren und wähle einen Ordner in „Dateien“. Einmal pro Woche wird dasselbe Archiv dorthin geschrieben, und die drei neuesten bleiben erhalten. Das Archiv enthält alle Daten der App, einschließlich der aus Apple Health importierten Werte, und bleibt in dem Ordner, den du gewählt hast.</p>
+<p>Die Datenbank, die schon auf dem neuen iPhone liegt, wird beiseitegelegt, nicht gelöscht. Markdown- und JSON-Exporte sind zum Lesen und Archivieren gedacht; nur die Datendatei lässt sich wieder importieren. Daten aus Apple Health ziehen mit Apple Health selbst um.</p>
+
+<h2>Daten löschen</h2>
+<ul>
+  <li><strong>Ein Eintrag:</strong> direkt im Eintrag bearbeiten oder löschen.</li>
+  <li><strong>Alles:</strong> Profil → Datenschutz &amp; Daten → Alle Daten löschen. Einträge, Tagebuchfotos, die von dir hinzugefügten Bücher und Anleitungen sowie die Sicherheitskopien der Datenbank werden gelöscht; geladene KI-Modelle bleiben. Das lässt sich nicht rückgängig machen; die App kehrt zur Ersteinrichtung zurück.</li>
+  <li><strong>Werte, die die App in Apple Health geschrieben hat:</strong> Tippe in der Health-App auf dein Profilbild → Apps → Übermensch und lösche die Daten dort.</li>
+  <li><strong>Wenn du die App löschst,</strong> werden alle ihre Daten vom iPhone entfernt. Exporte und Backups, die du gemacht hast, bleiben, bis du sie löschst.</li>
+</ul>
+
+<h2>Übermensch Pro</h2>
+<p>Übermensch Pro ist an deinen Apple Account gebunden und wird auf drei Arten angeboten: monatlich, jährlich (das Jahresabo beginnt mit zwei kostenlosen Wochen, sofern dein Apple Account dafür berechtigt ist) oder als Einmalkauf, der für immer gilt. Pro fügt jede Hypothese nach der ersten hinzu, samt den Belegen dahinter, dazu Wochen- und Monatsrückblicke, n-of-1-Experimente (Tests, die du an dir selbst durchführst) und zwei druckbare Seiten: ein Blatt fürs Arztgespräch und ein Jahresblatt. Eintragen, die Zeitleiste, Apple Health, Praxis, das KI-Gespräch und der Export bleiben kostenlos. Wochen- und Monatsrückblicke brauchen ein KI-Modell, das das iPhone ausführen kann; auf einem iPhone, das keines ausführen kann, werden sie daher nicht angeboten.</p>
+<p><strong>Kauf wiederherstellen.</strong> Melde dich auf einem neuen iPhone oder nach einer Neuinstallation mit demselben Apple Account im App Store an, öffne dann Profil → Übermensch Pro und tippe auf „Käufe wiederherstellen“. Erstattungen wickelt Apple unter <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> ab.</p>
+<p><strong>Abo kündigen.</strong> Profil → Übermensch Pro → „Abo verwalten“ oder die Einstellungen deines Apple Accounts. Kündige spätestens 24 Stunden vor Ende des laufenden Zeitraums; Pro bleibt bis zum Ende des Zeitraums aktiv.</p>
+
+<h2>Weitere Fragen</h2>
+<p><strong>Funktioniert die App offline?</strong> Ja. Eintragen, Barcode-Suche, die Suche nach Lebensmitteln und Übungen sowie das Diktat funktionieren ohne Verbindung (wenn du zum ersten Mal in einer Sprache diktierst, lädt iOS dafür möglicherweise das Spracherkennungsmodell von Apple). Internet brauchst du nur, um ein KI-Modell zu laden, für Private Cloud Compute, falls du es einschaltest, für das Wetter, falls du es einschaltest, und für Käufe im App Store. Barcodes kommen aus einer in die App eingebauten Datenbank; die Online-Suche nach unbekannten Codes ist ein eigener Schalter unter Profil → Datenschutz &amp; Daten → Barcodes und standardmäßig aus.</p>
+<p><strong>Ist das eine medizinische App?</strong> Nein. Übermensch ist kein Medizinprodukt und stellt keine Diagnosen. Messwerte werden als Signale gezeigt, und Zyklusschätzungen sind keine Verhütung und kein Fruchtbarkeitstest. Bei allem, was dich beunruhigt, geh zu einer Ärztin oder einem Arzt.</p>
+<p><strong>Wo sind meine Daten?</strong> Auf deinem iPhone. Siehe die <a href="privacy-policy-de.html">Datenschutzerklärung</a>.</p>
+
+</article>
+
+<div class="footer">© 2026 Aleksandr Konorev · <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a></div>
+
+</main>
+</body>
+</html>
