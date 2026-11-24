@@ -110,7 +110,7 @@
 
 <div class="eyebrow">§ PRIVACIA</div>
 <h1>Lo specchio è <em>locale.</em></h1>
-<div class="updated">Ultimo aggiornamento: 11 novembre 2026 · Übermensch 1.0 per iPhone (iOS 27)</div>
+<div class="updated">Ultimo aggiornamento: 24 novembre 2026 · Übermensch per iPhone (iOS 27)</div>
 <nav class="lang"><a href="https://yobius.github.io/ubermensch-privacy/">English</a> · <a href="https://yobius.github.io/ubermensch-privacy/#ru">Русский</a> · <a href="support-it.html">Supporto</a></nav>
 
 <article id="it" lang="it">
@@ -144,6 +144,7 @@
   <li>Libri importati ed evidenziazioni</li>
   <li>Le tue conversazioni con l’IA, le sue note (“memoria dell’IA”), osservazioni e ipotesi</li>
   <li>Integratori, eventi della vita e, se hai attivato questa opzione, la durata del giorno</li>
+  <li>I tuoi eventi e le loro occorrenze, le decisioni con il loro esito e le lettere al te stesso del futuro</li>
   <li>Impostazioni</li>
 </ul>
 <p>iOS cifra questi dati a riposo con la sua Protezione dati standard. L’app non sincronizza. I suoi dati sono inclusi nel backup del tuo iPhone (Backup iCloud o backup su computer), se ne fai uno. Quel backup appartiene al tuo Account Apple e noi non possiamo accedervi. I modelli di IA scaricati sono esclusi dai backup. L’app conserva sul dispositivo fino a tre copie di sicurezza settimanali del proprio database, così un database danneggiato può essere recuperato. Anche queste vengono rimosse con “Elimina tutti i dati”.</p>
@@ -153,13 +154,16 @@
 <p><strong>Le notifiche</strong> sono promemoria locali programmati sul dispositivo, e solo se le attivi.</p>
 <p><strong>Posizione (facoltativa).</strong> In Privacy e dati, sotto Luce del giorno, “Usa la mia posizione una volta” chiede la tua posizione e conserva sul dispositivo solo la sua latitudine, arrotondata a circa un chilometro, per calcolare quanto durano le giornate dove vivi. Nulla viene tracciato. “Dimentica la mia posizione” rimuove la latitudine salvata.</p>
 <p><strong>Calendario (facoltativo).</strong> Se attivi “Carico del calendario” in Privacy e dati → Contesto, l’app conta sul dispositivo le ore occupate nel tuo calendario. Gli eventi vengono letti, mai salvati né scritti.</p>
+<p><strong>Pressione dell’aria (facoltativo).</strong> Se attivi “Pressione dell’aria da questo iPhone” in Privacy e dati → Contesto, l’app legge il sensore di pressione dell’iPhone all’apertura, al massimo ogni tre ore, e conserva le letture sul dispositivo. Per questo iOS chiede l’accesso a Movimento e fitness; attraverso di esso l’app non legge altro: né passi, né attività, né altitudine.</p>
+<p><strong>Importazione da un altro diario.</strong> Un’esportazione da Daylio, Day One o Apple Journal che scegli tu viene letta sul dispositivo. Dopo la conferma dell’anteprima, le sue voci e i suoi stati d’animo entrano nei tuoi dati; il file in sé non viene conservato né inviato da nessuna parte.</p>
+<p><strong>Lettura ad alta voce.</strong> I riepiloghi e le risposte della chat vengono letti ad alta voce con le voci integrate in iOS, sul dispositivo.</p>
 <p><strong>Blocco dell’app.</strong> Face ID, Touch ID e il codice vengono verificati da iOS. L’app sa solo se la verifica è riuscita; non vede mai dati biometrici.</p>
 <p><strong>Cartelle che scegli.</strong> La copia settimanale e il diario in Markdown scrivono file in una cartella che scegli in File. La copia settimanale è una copia completa dei dati dell’app, compresi i valori importati da Salute; il diario in Markdown contiene solo le voci del diario. Se scegli una cartella di un fornitore cloud, i file sono soggetti ai termini di quel fornitore, non ai nostri; noi non li vediamo mai. Un estratto conto che importi viene letto una volta: le sue righe vengono salvate come spese ed entrate, e il file stesso non viene conservato.</p>
 
 <h2>App Salute (HealthKit)</h2>
 <p>L’accesso a Salute è facoltativo, e scegli ogni categoria nella schermata dei permessi di Apple. Dopo che hai concesso l’accesso, l’app importa fino a un anno del tuo storico di Salute e lo aggiorna quando apri l’app.</p>
 <h3>Dati letti</h3>
-<p>Passi; allenamenti; frequenza cardiaca a riposo, variabilità della frequenza cardiaca, pressione sanguigna, frequenza respiratoria, VO₂ max, glicemia, temperatura del polso durante il sonno; frequenza cardiaca media durante la camminata e recupero cardiaco dopo un allenamento; ossigeno nel sangue e disturbi respiratori durante il sonno; energia attiva e minuti di esercizio; livelli di rumore ambientale; peso, percentuale di grasso corporeo, circonferenza vita; sonno, comprese le fasi del sonno; minuti di consapevolezza; stato d’animo; numero di bevande alcoliche. Con il monitoraggio del ciclo (richiesto solo per un profilo femminile o quando registri le mestruazioni): flusso mestruale, stato menopausale e sanguinamento dopo la menopausa. Risultati degli esami di laboratorio da Health Records, solo quando li importi, dove Apple offre Health Records.</p>
+<p>Passi; allenamenti; frequenza cardiaca a riposo, variabilità della frequenza cardiaca, pressione sanguigna, frequenza respiratoria, VO₂ max, glicemia, temperatura del polso durante il sonno; frequenza cardiaca media durante la camminata e recupero cardiaco dopo un allenamento; ossigeno nel sangue e disturbi respiratori durante il sonno; energia attiva e minuti di esercizio; livelli di rumore ambientale; tempo alla luce diurna; i punteggi totali dei questionari su ansia (GAD-7) e depressione (PHQ-9) di Salute, mai le singole risposte; peso, percentuale di grasso corporeo, circonferenza vita; sonno, comprese le fasi del sonno; minuti di consapevolezza; stato d’animo, con le emozioni e i motivi che hai indicato in Salute; numero di bevande alcoliche. Con il monitoraggio del ciclo (richiesto solo per un profilo femminile o quando registri le mestruazioni): flusso mestruale, stato menopausale e sanguinamento dopo la menopausa. Risultati degli esami di laboratorio da Health Records, solo quando li importi, dove Apple offre Health Records. Frequenza cardiaca durante una pratica, solo se attivi il battito per quella pratica: l’app per Apple Watch avvia allora una sessione di allenamento per la durata della pratica, così l’orologio misura il battito in modo continuo, e quella sessione non viene salvata in Salute come allenamento.</p>
 <h3>Dati scritti (solo valori che inserisci nell’app)</h3>
 <p>Peso, pressione sanguigna e frequenza cardiaca a riposo; fibre, zuccheri, sodio, caffeina e bevande alcoliche dai pasti che registri; il tuo umore giornaliero come voce di stato d’animo e, con il monitoraggio del ciclo, il flusso mestruale. Quando elimini nell’app una misura corporea, un pasto o un giorno di mestruazioni, viene rimossa anche la copia che l’app aveva scritto in Salute.</p>
 <h3>Regole</h3>

@@ -110,7 +110,7 @@
 
 <div class="eyebrow">§ PRIVACIA</div>
 <h1>Der Spiegel ist <em>lokal.</em></h1>
-<div class="updated">Zuletzt aktualisiert: 11. November 2026 · Übermensch 1.0 für iPhone (iOS 27)</div>
+<div class="updated">Zuletzt aktualisiert: 24. November 2026 · Übermensch für iPhone (iOS 27)</div>
 <nav class="lang"><a href="#de">Deutsch</a> · <a href="https://yobius.github.io/ubermensch-privacy/">English</a> · <a href="support-de.html">Support</a></nav>
 
 <article id="de" lang="de">
@@ -144,6 +144,7 @@
   <li>Importierte Bücher und Markierungen</li>
   <li>Deine Gespräche mit der KI, ihre Notizen („KI-Gedächtnis“), Beobachtungen und Hypothesen</li>
   <li>Präparate, Lebensereignisse sowie die Tageslänge, falls du sie eingeschaltet hast</li>
+  <li>Deine eigenen Ereignisse und ihre Einträge, Entscheidungen mit ihrem Ausgang und Briefe an dein künftiges Ich</li>
   <li>Einstellungen</li>
 </ul>
 <p>iOS verschlüsselt diese Daten im Ruhezustand mit dem Standard-Datenschutz des Systems (Data Protection). Die App synchronisiert nicht. Ihre Daten sind in deinem iPhone-Backup enthalten (iCloud-Backup oder Backup auf einem Computer), falls du eines machst. Dieses Backup gehört zu deinem Apple Account, und wir haben keinen Zugriff darauf. Geladene KI-Modelle sind von Backups ausgenommen. Die App bewahrt bis zu drei wöchentliche Sicherheitskopien ihrer eigenen Datenbank auf dem Gerät auf, damit eine beschädigte Datenbank wiederhergestellt werden kann. „Alle Daten löschen“ entfernt auch diese.</p>
@@ -153,13 +154,16 @@
 <p><strong>Mitteilungen</strong> sind lokale Erinnerungen, die auf dem Gerät geplant werden, und das nur, wenn du sie einschaltest.</p>
 <p><strong>Standort (optional).</strong> Im Bereich „Tageslicht“ unter Datenschutz &amp; Daten fragt „Standort einmal verwenden“ nach deiner Position und bewahrt nur deren Breitengrad, auf etwa einen Kilometer gerundet, auf dem Gerät auf, um zu berechnen, wie lang die Tage dort sind, wo du lebst. Nichts wird verfolgt. „Meinen Standort vergessen“ entfernt den gespeicherten Breitengrad.</p>
 <p><strong>Kalender (optional).</strong> Wenn du „Kalenderauslastung“ unter Datenschutz &amp; Daten → Kontext einschaltest, zählt die App auf dem Gerät die in deinem Kalender gebuchten Stunden. Termine werden gelesen, nie gespeichert oder geschrieben.</p>
+<p><strong>Luftdruck (optional).</strong> Wenn du „Luftdruck von diesem iPhone“ unter Datenschutz &amp; Daten → Kontext einschaltest, liest die App den Drucksensor des iPhone beim Öffnen, höchstens alle drei Stunden, und behält die Werte auf dem Gerät. iOS fragt dafür nach dem Zugriff „Bewegung &amp; Fitness“; darüber liest die App nichts anderes: keine Schritte, keine Aktivität, keine Höhe.</p>
+<p><strong>Import aus einem anderen Tagebuch.</strong> Ein Export aus Daylio, Day One oder Apple Journal, den du auswählst, wird auf dem Gerät gelesen. Nachdem du die Vorschau bestätigt hast, werden seine Einträge und Stimmungen Teil deiner Aufzeichnungen; die Datei selbst wird nicht aufbewahrt und nirgendwohin gesendet.</p>
+<p><strong>Vorlesen.</strong> Rückblicke und Antworten im Chat werden mit den in iOS eingebauten Stimmen auf dem Gerät vorgelesen.</p>
 <p><strong>App-Sperre.</strong> Face ID, Touch ID und der Code werden von iOS geprüft. Die App erfährt nur, ob die Prüfung bestanden wurde; biometrische Daten sieht sie nie.</p>
 <p><strong>Ordner deiner Wahl.</strong> Die wöchentliche Kopie und der Markdown-Spiegel schreiben Dateien in einen Ordner, den du in der App „Dateien“ auswählst. Die wöchentliche Kopie ist eine vollständige Kopie der App-Daten, einschließlich der aus Health importierten Werte; der Markdown-Spiegel enthält nur Tagebucheinträge. Wenn du einen Ordner bei einem Cloud-Anbieter wählst, gelten für die Dateien die Bedingungen dieses Anbieters, nicht unsere; wir sehen sie nie. Ein Kontoauszug, den du importierst, wird einmal gelesen: Seine Zeilen werden als Ausgaben und Einnahmen gespeichert, die Datei selbst wird nicht aufbewahrt.</p>
 
 <h2>Apple Health (HealthKit)</h2>
 <p>Der Zugriff auf Health ist optional, und du wählst jede Kategorie im Berechtigungsdialog von Apple aus. Nachdem du den Zugriff erlaubt hast, importiert die App bis zu ein Jahr deines Health-Verlaufs und aktualisiert ihn, wenn du die App öffnest.</p>
 <h3>Gelesen</h3>
-<p>Schritte; Trainings; Ruhepuls, Herzfrequenzvariabilität, Blutdruck, Atemfrequenz, VO₂max, Blutzucker, Handgelenktemperatur im Schlaf; durchschnittliche Herzfrequenz beim Gehen und Herzfrequenzerholung nach einem Training; Blutsauerstoff und Atemstörungen im Schlaf; aktive Energie und Trainingsminuten; Umgebungsgeräuschpegel; Gewicht, Körperfettanteil, Taillenumfang; Schlaf, einschließlich der Schlafphasen; Achtsamkeitsminuten; Gemütszustand; die Anzahl alkoholischer Getränke. Mit Zyklustracking (nur bei einem weiblichen Profil angefragt oder wenn du eine Periode einträgst): Menstruationsblutung, Menopausenstatus und Blutungen nach der Menopause. Laborergebnisse aus Health Records, nur wenn du sie importierst und dort, wo Apple Health Records anbietet.</p>
+<p>Schritte; Trainings; Ruhepuls, Herzfrequenzvariabilität, Blutdruck, Atemfrequenz, VO₂max, Blutzucker, Handgelenktemperatur im Schlaf; durchschnittliche Herzfrequenz beim Gehen und Herzfrequenzerholung nach einem Training; Blutsauerstoff und Atemstörungen im Schlaf; aktive Energie und Trainingsminuten; Umgebungsgeräuschpegel; Zeit bei Tageslicht; die Gesamtergebnisse der Health-Fragebögen zu Angst (GAD-7) und Depression (PHQ-9), nie die einzelnen Antworten; Gewicht, Körperfettanteil, Taillenumfang; Schlaf, einschließlich der Schlafphasen; Achtsamkeitsminuten; Gemütszustand, samt den Gefühlen und Anlässen, die du in Health dazu genannt hast; die Anzahl alkoholischer Getränke. Mit Zyklustracking (nur bei einem weiblichen Profil angefragt oder wenn du eine Periode einträgst): Menstruationsblutung, Menopausenstatus und Blutungen nach der Menopause. Laborergebnisse aus Health Records, nur wenn du sie importierst und dort, wo Apple Health Records anbietet. Herzfrequenz während einer Übung, nur wenn du den Puls für diese Übung einschaltest: Die Apple-Watch-App startet dann für die Dauer der Übung eine Trainingssitzung, damit die Uhr den Puls durchgehend misst, und diese Sitzung wird nicht als Training in Health gespeichert.</p>
 <h3>Zurückgeschrieben (nur Werte, die du in der App eingibst)</h3>
 <p>Gewicht, Blutdruck und Ruhepuls; Ballaststoffe, Zucker, Natrium, Koffein und alkoholische Getränke aus eingetragenen Mahlzeiten; deine tägliche Stimmung als Gemütszustand und, mit Zyklustracking, die Menstruationsblutung. Wenn du in der App einen Körperwert, eine Mahlzeit oder einen Periodentag löschst, wird auch die Kopie entfernt, die die App in Health geschrieben hat.</p>
 <h3>Regeln</h3>

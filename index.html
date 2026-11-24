@@ -110,7 +110,7 @@
 
 <div class="eyebrow">§ PRIVACIA</div>
 <h1>The mirror is <em>local.</em></h1>
-<div class="updated">Last updated: November 11, 2026 · Übermensch 1.0 for iPhone (iOS 27)</div>
+<div class="updated">Last updated: November 24, 2026 · Übermensch for iPhone (iOS 27)</div>
 <nav class="lang"><a href="#en">English</a> · <a href="#ru">Русский</a> · <a href="privacy-policy-de.html">Deutsch</a> · <a href="privacy-policy-fr.html">Français</a> · <a href="privacy-policy-es.html">Español</a> · <a href="privacy-policy-it.html">Italiano</a> · <a href="support.html">Support / Поддержка</a></nav>
 
 <article id="en" lang="en">
@@ -144,6 +144,7 @@
   <li>Imported books and highlights</li>
   <li>Your conversations with the AI, its notes (“AI memory”), observations and hypotheses</li>
   <li>Supplements, life events, and day length, if you turned it on</li>
+  <li>Your own events and their marks, decisions with how they turned out, and letters to your future self</li>
   <li>Settings</li>
 </ul>
 <p>iOS encrypts this data at rest with its standard Data Protection. The app does not sync. Its data is included in your iPhone backup (iCloud Backup or a computer backup) if you make one. That backup belongs to your Apple Account and we cannot access it. Downloaded AI models are excluded from backups. The app keeps up to three weekly safety copies of its own database on the device, so a damaged database can be recovered. Delete all data removes them too.</p>
@@ -153,13 +154,16 @@
 <p><strong>Notifications</strong> are local reminders scheduled on the device, and only if you turn them on.</p>
 <p><strong>Location (optional).</strong> Under Daylight in Privacy &amp; Data, “Use my location once” asks for your position and keeps only its latitude, rounded to about a kilometer, on the device to compute how long the days are where you live. Nothing is tracked. “Forget my location” removes the saved latitude.</p>
 <p><strong>Calendar (optional).</strong> If you turn on “Calendar load” in Privacy &amp; Data → Context, the app counts the hours booked in your calendar on the device. Events are read, never stored or written.</p>
+<p><strong>Air pressure (optional).</strong> If you turn on “Air pressure from this iPhone” in Privacy &amp; Data → Context, the app reads the pressure sensor of the iPhone when it opens, at most every three hours, and keeps the readings on the device. iOS asks for Motion &amp; Fitness access for this; the app reads nothing else through it: no steps, no activity, no altitude.</p>
+<p><strong>Import from another journal.</strong> An export from Daylio, Day One or Apple Journal that you pick is read on the device. After you confirm the preview, its entries and moods become part of your record; the file itself is not kept and is not sent anywhere.</p>
+<p><strong>Reading aloud.</strong> Reviews and chat replies are read aloud with the voices built into iOS, on the device.</p>
 <p><strong>App lock.</strong> Face ID, Touch ID and the passcode are checked by iOS. The app only learns whether the check passed; it never sees biometric data.</p>
 <p><strong>Folders you choose.</strong> The weekly copy and the Markdown mirror write files into a folder you pick in Files. The weekly copy is a full copy of the app’s data, including values imported from Health; the Markdown mirror holds journal entries only. If you pick a folder with a cloud provider, the files are under that provider’s terms, not ours; we never see them. A bank statement you import is read once: its rows are saved as expenses and income, and the file itself is not kept.</p>
 
 <h2>Apple Health (HealthKit)</h2>
 <p>Health access is optional, and you choose each category in Apple’s permission sheet. After you grant access, the app imports up to a year of your Health history and refreshes it when you open the app.</p>
 <h3>Read</h3>
-<p>Steps; workouts; resting heart rate, heart-rate variability, blood pressure, respiratory rate, VO₂ max, blood glucose, sleeping wrist temperature; walking heart rate average and heart-rate recovery after a workout; blood oxygen and breathing disturbances during sleep; active energy and exercise minutes; environmental sound levels; weight, body-fat percentage, waist circumference; sleep, including sleep stages; mindful minutes; state of mind; the number of alcoholic drinks. With cycle tracking (requested only for a female profile or when you log a period): menstrual flow, menopausal state and bleeding after menopause. Lab results from Health Records, only when you import them, where Apple offers Health Records.</p>
+<p>Steps; workouts; resting heart rate, heart-rate variability, blood pressure, respiratory rate, VO₂ max, blood glucose, sleeping wrist temperature; walking heart rate average and heart-rate recovery after a workout; blood oxygen and breathing disturbances during sleep; active energy and exercise minutes; environmental sound levels; time in daylight; the total scores of Health's anxiety (GAD-7) and depression (PHQ-9) questionnaires, never the individual answers; weight, body-fat percentage, waist circumference; sleep, including sleep stages; mindful minutes; state of mind, with the feelings and what it was about that you named in Health; the number of alcoholic drinks. With cycle tracking (requested only for a female profile or when you log a period): menstrual flow, menopausal state and bleeding after menopause. Lab results from Health Records, only when you import them, where Apple offers Health Records. Heart rate during a practice, only when you switch the pulse on for that practice: the Apple Watch app then runs a workout session for the length of the practice so the watch measures the heart continuously, and that session is not saved to Health as a workout.</p>
 <h3>Written back (only values you enter in the app)</h3>
 <p>Weight, blood pressure and resting heart rate; fiber, sugar, sodium, caffeine and alcoholic drinks from meals you log; your daily mood as a state-of-mind entry, and, with cycle tracking, menstrual flow. When you delete a body measurement, a meal or a period day in the app, the copy the app wrote to Health is removed too.</p>
 <h3>Rules</h3>
@@ -237,7 +241,7 @@
 
 <div class="eyebrow">§ PRIVACIA · RU</div>
 <h2>Политика конфиденциальности</h2>
-<div class="updated">Обновлено: 11 ноября 2026 · Übermensch 1.0 для iPhone (iOS 27)</div>
+<div class="updated">Обновлено: 24 ноября 2026 · Übermensch для iPhone (iOS 27)</div>
 
 <p>Übermensch — приложение для самонаблюдения на iPhone. Оно хранит то, что вы сами записываете или импортируете (данные тела, еду, деньги, задачи, дневник, ежедневные отметки), и ищет между ними связи. Всё записанное хранится на вашем iPhone. У Übermensch нет аккаунтов, своего сервера и аналитики, поэтому разработчик никогда не получает ваши записи.</p>
 <p>Ниже перечислены все случаи, когда приложение выходит в сеть, что при этом покидает телефон и как удалить всё.</p>
@@ -268,6 +272,7 @@
   <li>Импортированные книги и выделения</li>
   <li>Разговоры с ИИ, его заметки («память ИИ»), наблюдения и гипотезы</li>
   <li>Добавки, жизненные события, а также длина светового дня, если вы её включили</li>
+  <li>Ваши события и отметки о них, решения с их итогами и письма себе в будущее</li>
   <li>Настройки</li>
 </ul>
 <p>iOS шифрует эти данные на устройстве стандартной защитой данных. Приложение ничего не синхронизирует. Его данные попадают в резервную копию iPhone (в iCloud или на компьютере), если вы её делаете. Эта копия принадлежит вашему Apple Account, и у нас к ней доступа нет. Скачанные модели ИИ в резервные копии не входят. Приложение хранит на устройстве до трёх еженедельных страховочных копий своей базы, чтобы её можно было восстановить при повреждении. «Удалить все данные» удаляет и их.</p>
@@ -277,13 +282,16 @@
 <p><strong>Уведомления</strong> — это локальные напоминания. Они планируются на самом устройстве и приходят, только если вы их включили.</p>
 <p><strong>Геолокация (по желанию).</strong> В разделе «Приватность и данные» → «Световой день» кнопка «Использовать моё местоположение один раз» запрашивает местоположение и хранит на устройстве только широту, округлённую примерно до километра, чтобы считать длину дня там, где вы живёте. Ничего не отслеживается. «Забыть моё местоположение» удаляет сохранённую широту.</p>
 <p><strong>Календарь (по желанию).</strong> Если включить переключатель «Нагрузка календаря» в разделе «Приватность и данные» → «Контекст», приложение считает занятые часы на устройстве. События только читаются, не сохраняются и не записываются.</p>
+<p><strong>Давление воздуха (по желанию).</strong> Если включить переключатель «Давление воздуха с этого iPhone» в разделе «Приватность и данные» → «Контекст», приложение читает датчик давления iPhone при открытии, не чаще раза в три часа, и хранит показания на устройстве. iOS запрашивает для этого доступ «Движение и фитнес»; больше ничего через него приложение не читает: ни шаги, ни активность, ни высоту.</p>
+<p><strong>Импорт из другого дневника.</strong> Выбранный вами экспорт из Daylio, Day One или Apple Journal читается на устройстве. После того как вы подтвердите предпросмотр, его записи и настроения становятся частью вашей записи; сам файл не сохраняется и никуда не отправляется.</p>
+<p><strong>Чтение вслух.</strong> Обзоры и ответы в чате читаются вслух голосами, встроенными в iOS, на устройстве.</p>
 <p><strong>Замок приложения.</strong> Face ID, Touch ID и код-пароль проверяет iOS. Приложение узнаёт только результат проверки и никогда не видит биометрические данные.</p>
 <p><strong>Папки, которые вы выбираете.</strong> Еженедельная копия и зеркало дневника в Markdown пишут файлы в папку, выбранную вами в «Файлах». Еженедельная копия — полная копия данных приложения, включая значения, импортированные из «Здоровья»; в зеркале Markdown только записи дневника. Если вы выбрали папку облачного сервиса, файлы живут по правилам этого сервиса, а не нашим; мы их не видим. Банковская выписка при импорте читается один раз: её строки сохраняются как расходы и доходы, а сам файл не хранится.</p>
 
 <h2>Apple Health (HealthKit)</h2>
 <p>Доступ к «Здоровью» необязателен: каждую категорию вы выбираете в системном окне Apple. После разрешения приложение импортирует историю из «Здоровья» за последний год и обновляет её, когда вы открываете приложение.</p>
 <h3>Чтение</h3>
-<p>Шаги; тренировки; пульс в покое, вариабельность пульса, давление, частота дыхания, VO₂ max, глюкоза крови, температура запястья во сне; средний пульс при ходьбе и восстановление пульса после тренировки; кислород в крови и нарушения дыхания во сне; активная энергия и минуты упражнений; уровень окружающего шума; вес, процент жира, обхват талии; сон, включая фазы сна; минуты осознанности; состояние ума; количество алкогольных напитков. При ведении цикла (запрашивается только для женского профиля или когда вы отмечаете менструацию): менструальные выделения, менопаузальный статус и кровотечения после менопаузы. Результаты анализов из медицинских записей Health Records — только когда вы их импортируете и там, где Apple предлагает Health Records.</p>
+<p>Шаги; тренировки; пульс в покое, вариабельность пульса, давление, частота дыхания, VO₂ max, глюкоза крови, температура запястья во сне; средний пульс при ходьбе и восстановление пульса после тренировки; кислород в крови и нарушения дыхания во сне; активная энергия и минуты упражнений; уровень окружающего шума; время на дневном свету; итоговые баллы опросников тревоги (GAD-7) и депрессии (PHQ-9) из «Здоровья», без отдельных ответов; вес, процент жира, обхват талии; сон, включая фазы сна; минуты осознанности; состояние ума — вместе с чувствами и поводами, которые вы назвали в «Здоровье»; количество алкогольных напитков. При ведении цикла (запрашивается только для женского профиля или когда вы отмечаете менструацию): менструальные выделения, менопаузальный статус и кровотечения после менопаузы. Результаты анализов из медицинских записей Health Records — только когда вы их импортируете и там, где Apple предлагает Health Records. Пульс во время практики — только если вы включили пульс для этой практики: приложение на Apple Watch на время практики запускает сеанс тренировки, чтобы часы измеряли пульс непрерывно, и этот сеанс не сохраняется в «Здоровье» как тренировка.</p>
 <h3>Запись (только то, что вы ввели в приложении)</h3>
 <p>Вес, давление и пульс в покое; клетчатка, сахар, натрий, кофеин и алкогольные напитки из записанной еды; дневное настроение как запись «состояния ума», а при ведении цикла — менструальные выделения. Если вы удаляете в приложении замер тела, приём пищи или день цикла, копия, которую приложение записало в «Здоровье», тоже удаляется.</p>
 <h3>Правила</h3>
