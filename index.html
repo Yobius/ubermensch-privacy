@@ -4,114 +4,112 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Übermensch — Privacy Policy</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#E4ECF5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11161F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <style>
     :root {
-      --paper: #ECE7D9;
-      --ink: #18171C;
-      --rule: rgba(24,23,28,0.18);
-      --muted: rgba(24,23,28,0.55);
-      --accent: #B12B1B;
-      --display: 'Fraunces', Georgia, serif;
-      --serif: 'Newsreader', Georgia, serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color-scheme: light dark;
+      --ground: #E4ECF5; --ink: #151B24; --dim: #474E58; --faint: #5D646F;
+      --sheet: rgba(249,252,255,.76); --hi: rgba(255,255,255,.8); --hair: rgba(62,72,88,.18); --shadow: rgba(52,70,98,.3);
+      --amber: #FAB72A; --on-amber: #151B24; --link: #8C4A00; --code: rgba(62,72,88,.09);
+      --sleep: #3778D7; --money: #2E9E52; --mood: #9F55BE; --field: 46%;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ground: #11161F; --ink: #EAEFF5; --dim: #AEB9C4; --faint: #8993A0;
+        --sheet: rgba(28,34,45,.74); --hi: rgba(255,255,255,.07); --hair: rgba(218,223,229,.15); --shadow: rgba(3,6,12,.7);
+        --link: #FAB72A; --code: rgba(218,223,229,.1);
+        --sleep: #5F99ED; --money: #5BBD74; --mood: #BB79D7; --field: 32%;
+      }
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     html, body { margin: 0; padding: 0; }
     body {
-      background: var(--paper);
+      background: var(--ground);
       color: var(--ink);
-      font-family: var(--serif);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 17px;
       line-height: 1.6;
-      padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 56px);
+      -webkit-font-smoothing: antialiased;
+      padding: 14px max(16px, env(safe-area-inset-right)) clamp(40px, 6vw, 80px) max(16px, env(safe-area-inset-left));
     }
-    main { max-width: 720px; margin: 0 auto; }
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(62vmax 52vmax at 0% 0%, color-mix(in oklab, var(--sleep) var(--field), transparent), transparent 70%),
+        radial-gradient(56vmax 46vmax at 100% 4%, color-mix(in oklab, var(--amber) var(--field), transparent), transparent 70%),
+        radial-gradient(62vmax 52vmax at 100% 100%, color-mix(in oklab, var(--mood) var(--field), transparent), transparent 70%),
+        radial-gradient(50vmax 46vmax at 0% 88%, color-mix(in oklab, var(--money) calc(var(--field) * .7), transparent), transparent 70%),
+        var(--ground);
+    }
+    .top, main { max-width: 780px; margin-left: auto; margin-right: auto; }
+    .top {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      min-height: 58px; padding: 0 8px 0 12px; margin-bottom: 14px; border-radius: 999px;
+      background: var(--sheet); border: 1px solid var(--hair);
+      -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5);
+      box-shadow: inset 0 1px 0 var(--hi), 0 18px 44px -28px var(--shadow);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; color: var(--ink); text-decoration: none; border: 0; }
+    .brand img { width: 30px; height: 30px; border-radius: 8px; display: block; }
+    .cross { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 999px; background: var(--amber); color: var(--on-amber); font-weight: 700; font-size: 15px; text-decoration: none; border: 0; white-space: nowrap; }
+    main {
+      background: var(--sheet); border: 1px solid var(--hair); border-radius: clamp(22px, 4vw, 32px);
+      padding: clamp(24px, 5vw, 56px) clamp(20px, 5vw, 56px);
+      -webkit-backdrop-filter: blur(26px) saturate(1.5); backdrop-filter: blur(26px) saturate(1.5);
+      box-shadow: inset 0 1px 0 var(--hi), 0 30px 70px -40px var(--shadow);
     }
     h1 {
-      font-family: var(--display);
-      font-weight: 200;
-      font-size: clamp(40px, 6vw, 80px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 0 0 12px;
+      font-weight: 700; font-size: clamp(30px, 7vw, 54px); line-height: 1.04; letter-spacing: -.03em;
+      margin: 0 0 12px; text-wrap: balance; hyphens: auto; overflow-wrap: break-word;
     }
-    .updated {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 56px;
+    h1 em { font-style: normal; color: var(--faint); }
+    .updated { font-size: 14.5px; color: var(--dim); margin-bottom: 22px; }
+    .lang { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 36px; }
+    .lang a {
+      display: inline-flex; align-items: center; min-height: 40px; padding: 0 15px; border-radius: 999px;
+      border: 1px solid var(--hair); color: var(--dim); font-size: 14.5px; font-weight: 600; text-decoration: none;
     }
-    h2 {
-      font-family: var(--display);
-      font-weight: 300;
-      font-size: 28px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin: 56px 0 16px;
-    }
-    h3 {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 32px 0 12px;
-    }
-    p { margin: 0 0 16px; }
-    ul { padding-left: 24px; margin: 0 0 16px; }
+    .lang a[aria-current] { background: var(--amber); border-color: transparent; color: var(--on-amber); }
+    h2 { font-weight: 700; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.18; letter-spacing: -.02em; margin: 48px 0 14px; text-wrap: balance; }
+    h3 { font-size: 13px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); margin: 30px 0 10px; }
+    p { margin: 0 0 16px; text-wrap: pretty; }
+    ul, ol { padding-left: 24px; margin: 0 0 16px; }
     li { margin-bottom: 8px; }
-    em { font-family: var(--display); font-style: italic; }
-    code, .api {
-      font-family: var(--mono);
-      font-size: 0.92em;
-      background: rgba(24,23,28,0.05);
-      padding: 1px 6px;
-      border-radius: 3px;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      margin: 56px 0;
-    }
-    .footer {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 56px;
-    }
-    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
-    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
-    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--rule); }
-    th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
-    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .lang { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; margin: -32px 0 48px; }
+    li::marker { color: var(--faint); }
+    em { font-style: italic; }
+    strong, b { font-weight: 600; }
+    code, .api { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; background: var(--code); padding: 1px 6px; border-radius: 6px; }
     code { word-break: break-all; }
+    hr { border: 0; border-top: 1px solid var(--hair); margin: 48px 0; }
+    a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--hair); }
+    th { font-size: 12.5px; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .footer { font-size: 14px; color: var(--dim); margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--hair); }
     @media (max-width: 600px) {
       .table-wrap tr:first-child { display: none; }
       .table-wrap tr, .table-wrap td { display: block; }
-      .table-wrap tr { border-top: 1px solid var(--rule); padding: 12px 0; }
+      .table-wrap tr { border-top: 1px solid var(--hair); padding: 12px 0; }
       .table-wrap td { border: 0; padding: 2px 0; }
       .table-wrap td:first-child { font-weight: 600; }
-      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-size: 12px; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); }
     }
   </style>
 </head>
 <body>
+<header class="top"><a class="brand" href="https://yobius.github.io/ubermensch-site/"><img src="icon.png" alt="" width="30" height="30">Übermensch</a><a class="cross" href="support.html">Support</a></header>
 <main>
 
-<div class="eyebrow">§ PRIVACIA</div>
-<h1>The mirror is <em>local.</em></h1>
+<h1>Privacy <em>policy.</em></h1>
 <div class="updated">Last updated: November 24, 2026 · Übermensch for iPhone (iOS 27)</div>
-<nav class="lang"><a href="#en">English</a> · <a href="#ru">Русский</a> · <a href="privacy-policy-de.html">Deutsch</a> · <a href="privacy-policy-fr.html">Français</a> · <a href="privacy-policy-es.html">Español</a> · <a href="privacy-policy-it.html">Italiano</a> · <a href="support.html">Support / Поддержка</a></nav>
+<nav class="lang" aria-label="Language"><a href="index.html" aria-current="page" lang="en">English</a><a href="privacy-policy-de.html" lang="de">Deutsch</a><a href="privacy-policy-fr.html" lang="fr">Français</a><a href="privacy-policy-es.html" lang="es">Español</a><a href="privacy-policy-it.html" lang="it">Italiano</a></nav>
 
 <article id="en" lang="en">
 
@@ -235,135 +233,7 @@
 
 </article>
 
-<hr>
-
-<article id="ru" lang="ru">
-
-<div class="eyebrow">§ PRIVACIA · RU</div>
-<h2>Политика конфиденциальности</h2>
-<div class="updated">Обновлено: 24 ноября 2026 · Übermensch для iPhone (iOS 27)</div>
-
-<p>Übermensch — приложение для самонаблюдения на iPhone. Оно хранит то, что вы сами записываете или импортируете (данные тела, еду, деньги, задачи, дневник, ежедневные отметки), и ищет между ними связи. Всё записанное хранится на вашем iPhone. У Übermensch нет аккаунтов, своего сервера и аналитики, поэтому разработчик никогда не получает ваши записи.</p>
-<p>Ниже перечислены все случаи, когда приложение выходит в сеть, что при этом покидает телефон и как удалить всё.</p>
-
-<h2>Коротко</h2>
-<ul>
-  <li>Ваши записи живут на вашем iPhone, в ваших собственных резервных копиях iPhone и в копиях, которые вы делаете сами.</li>
-  <li>ИИ по умолчанию работает на устройстве. Необязательный Apple Private Cloud Compute выключен, пока вы его не включите.</li>
-  <li>Приложение выходит в сеть, только когда вы сами это включили или попросили: чтобы скачать выбранную модель ИИ; чтобы отправить запрос в Private Cloud Compute, если вы его включили; и чтобы найти штрихкод, которого нет во встроенной базе, если вы включили онлайн-поиск штрихкодов. Кроме того, при запуске оно спрашивает у App Store цены Pro, а iOS может скачать речевую модель Apple при первой диктовке. Покупки проходят через App Store.</li>
-  <li>Никаких аккаунтов, рекламы, трекинга, SDK аналитики и сбора сбоев. Мы не продаём и не передаём данные: у нас их нет.</li>
-</ul>
-
-<h2>Кто мы</h2>
-<p>Übermensch делает Oleksandr Konorev (Олександр Конорев), независимый разработчик из Украины («мы»). Связь: <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a>.</p>
-
-<h2>Что мы собираем</h2>
-<p>Через приложение — ничего. У нас нет сервера, и вашим записям некуда уйти. Нет входа, сбора почты, телеметрии и рекламного идентификатора. Единственные персональные данные, которые мы можем получить, — то, что вы сами пришлёте письмом (см. <a href="#ru-contact">Связь с нами</a>).</p>
-
-<h2>Что остаётся на вашем iPhone</h2>
-<ul>
-  <li>Записи дневника, ежедневные отметки, настроение, телесные ощущения, утверждения об идентичности, размышления и заметки</li>
-  <li>Задачи, навыки и практики</li>
-  <li>Еда и напитки с калориями и нутриентами, упражнения</li>
-  <li>Расходы, доходы, бюджеты и регулярные платежи</li>
-  <li>Замеры тела и результаты анализов, которые вы вводите или импортируете</li>
-  <li>Записи о цикле, если вы его ведёте</li>
-  <li>Фото, прикреплённые к записям дневника, и моменты, выбранные в «Предложениях для дневника» Apple</li>
-  <li>Импортированные книги и выделения</li>
-  <li>Разговоры с ИИ, его заметки («память ИИ»), наблюдения и гипотезы</li>
-  <li>Добавки, жизненные события, а также длина светового дня, если вы её включили</li>
-  <li>Ваши события и отметки о них, решения с их итогами и письма себе в будущее</li>
-  <li>Настройки</li>
-</ul>
-<p>iOS шифрует эти данные на устройстве стандартной защитой данных. Приложение ничего не синхронизирует. Его данные попадают в резервную копию iPhone (в iCloud или на компьютере), если вы её делаете. Эта копия принадлежит вашему Apple Account, и у нас к ней доступа нет. Скачанные модели ИИ в резервные копии не входят. Приложение хранит на устройстве до трёх еженедельных страховочных копий своей базы, чтобы её можно было восстановить при повреждении. «Удалить все данные» удаляет и их.</p>
-<p><strong>Автоматическая очистка.</strong> Переписка с ИИ старше 365 дней удаляется. Отклонённые наблюдения и подсказки удаляются через 60 дней после отклонения. Сам реестр гипотез сохраняется.</p>
-<p><strong>Поиск iPhone.</strong> Записи дневника, наблюдения ИИ, встроенные и добавленные вами инструкции, недавние приёмы пищи, расходы и добавки, а также панели анализов добавляются в локальный индекс Spotlight, чтобы их можно было найти поиском iPhone. Индекс остаётся на устройстве и очищается при удалении всех данных. Скрыть содержимое приложения из поиска можно в Настройках iOS → Приложения → Übermensch.</p>
-<p><strong>Камера, микрофон и фото.</strong> Штрихкоды, чеки, фото еды, меню, этикетки добавок, экраны измерительных приборов, скриншоты банковского приложения и фото бланков анализов распознаются на устройстве, и снимки с камеры его не покидают. Диктовка использует распознавание речи на устройстве: звук не сохраняется, остаётся только текст. Когда вы впервые диктуете на каком-то языке, iOS может скачать для него речевую модель Apple; загрузка идёт от Apple, и ваш голос и текст при этом никуда не отправляются.</p>
-<p><strong>Уведомления</strong> — это локальные напоминания. Они планируются на самом устройстве и приходят, только если вы их включили.</p>
-<p><strong>Геолокация (по желанию).</strong> В разделе «Приватность и данные» → «Световой день» кнопка «Использовать моё местоположение один раз» запрашивает местоположение и хранит на устройстве только широту, округлённую примерно до километра, чтобы считать длину дня там, где вы живёте. Ничего не отслеживается. «Забыть моё местоположение» удаляет сохранённую широту.</p>
-<p><strong>Календарь (по желанию).</strong> Если включить переключатель «Нагрузка календаря» в разделе «Приватность и данные» → «Контекст», приложение считает занятые часы на устройстве. События только читаются, не сохраняются и не записываются.</p>
-<p><strong>Давление воздуха (по желанию).</strong> Если включить переключатель «Давление воздуха с этого iPhone» в разделе «Приватность и данные» → «Контекст», приложение читает датчик давления iPhone при открытии, не чаще раза в три часа, и хранит показания на устройстве. iOS запрашивает для этого доступ «Движение и фитнес»; больше ничего через него приложение не читает: ни шаги, ни активность, ни высоту.</p>
-<p><strong>Импорт из другого дневника.</strong> Выбранный вами экспорт из Daylio, Day One или Apple Journal читается на устройстве. После того как вы подтвердите предпросмотр, его записи и настроения становятся частью вашей записи; сам файл не сохраняется и никуда не отправляется.</p>
-<p><strong>Чтение вслух.</strong> Обзоры и ответы в чате читаются вслух голосами, встроенными в iOS, на устройстве.</p>
-<p><strong>Замок приложения.</strong> Face ID, Touch ID и код-пароль проверяет iOS. Приложение узнаёт только результат проверки и никогда не видит биометрические данные.</p>
-<p><strong>Папки, которые вы выбираете.</strong> Еженедельная копия и зеркало дневника в Markdown пишут файлы в папку, выбранную вами в «Файлах». Еженедельная копия — полная копия данных приложения, включая значения, импортированные из «Здоровья»; в зеркале Markdown только записи дневника. Если вы выбрали папку облачного сервиса, файлы живут по правилам этого сервиса, а не нашим; мы их не видим. Банковская выписка при импорте читается один раз: её строки сохраняются как расходы и доходы, а сам файл не хранится.</p>
-
-<h2>Apple Health (HealthKit)</h2>
-<p>Доступ к «Здоровью» необязателен: каждую категорию вы выбираете в системном окне Apple. После разрешения приложение импортирует историю из «Здоровья» за последний год и обновляет её, когда вы открываете приложение.</p>
-<h3>Чтение</h3>
-<p>Шаги; тренировки; пульс в покое, вариабельность пульса, давление, частота дыхания, VO₂ max, глюкоза крови, температура запястья во сне; средний пульс при ходьбе и восстановление пульса после тренировки; кислород в крови и нарушения дыхания во сне; активная энергия и минуты упражнений; уровень окружающего шума; время на дневном свету; итоговые баллы опросников тревоги (GAD-7) и депрессии (PHQ-9) из «Здоровья», без отдельных ответов; вес, процент жира, обхват талии; сон, включая фазы сна; минуты осознанности; состояние ума — вместе с чувствами и поводами, которые вы назвали в «Здоровье»; количество алкогольных напитков. При ведении цикла (запрашивается только для женского профиля или когда вы отмечаете менструацию): менструальные выделения, менопаузальный статус и кровотечения после менопаузы. Результаты анализов из медицинских записей Health Records — только когда вы их импортируете и там, где Apple предлагает Health Records. Пульс во время практики — только если вы включили пульс для этой практики: приложение на Apple Watch на время практики запускает сеанс тренировки, чтобы часы измеряли пульс непрерывно, и этот сеанс не сохраняется в «Здоровье» как тренировка.</p>
-<h3>Запись (только то, что вы ввели в приложении)</h3>
-<p>Вес, давление и пульс в покое; клетчатка, сахар, натрий, кофеин и алкогольные напитки из записанной еды; дневное настроение как запись «состояния ума», а при ведении цикла — менструальные выделения. Если вы удаляете в приложении замер тела, приём пищи или день цикла, копия, которую приложение записало в «Здоровье», тоже удаляется.</p>
-<h3>Правила</h3>
-<ul>
-  <li>Данные «Здоровья» никогда не продаются, не передаются третьим лицам и не используются для рекламы, маркетинга или коммерческого сбора данных.</li>
-  <li>Приложение никогда не отправляет данные «Здоровья» нам или на какой-либо свой сервер и ничего не синхронизирует. Как и остальные данные приложения, импортированные значения входят в вашу резервную копию iPhone, если вы её делаете, и в экспорты и копии, которые вы делаете сами: экспорт в Markdown, JSON и файл данных, а также еженедельную копию в выбранную вами папку.</li>
-  <li>Кроме копий, которые вы делаете сами, и того, что вы просите прочитать Siri или «Команды» (команда «Сон за неделю» передаёт им сон за последние семь ночей по правилам Apple), значения из «Здоровья» могут покинуть телефон только одним путём — через необязательный Private Cloud Compute. Если вы его включили, запрос, на который он отвечает, может содержать, например, сон, пульс в покое, настроение или фазу цикла (см. ниже).</li>
-  <li>Показатели отображаются как «сигналы», а не как диагнозы. Übermensch — не медицинское изделие и не даёт медицинских советов. Прогнозы цикла — не контрацепция и не тест на фертильность.</li>
-</ul>
-
-<h2>ИИ</h2>
-<p>ИИ выбирается в разделе Профиль → ИИ. Режим «Авто» берёт первый готовый вариант.</p>
-<ul>
-  <li><strong>Apple Intelligence (Apple Foundation Models).</strong> Модель Apple, встроенная в iOS на iPhone с поддержкой Apple Intelligence. Работает на устройстве, приложение ничего не скачивает.</li>
-  <li><strong>Übermensch AI.</strong> Собственная модель приложения — дообученная открытая LFM2.5 2.6B от Liquid AI. Доступна на iPhone с 8 ГБ памяти рядом с исходной LFM2.5 2.6B, на основе которой она обучена. Выбранная модель скачивается один раз с Hugging Face по нажатию «Скачать модель» (около 2,9 ГБ) и дальше работает полностью на устройстве.</li>
-  <li><strong>Private Cloud Compute (Apple).</strong> Необязателен и <em>выключен по умолчанию</em>. После включения он отвечает в трёх случаях: когда вы выбрали его явно; в режиме «Авто», если на устройстве нет готовой модели; и в режиме «Авто» для месячного обзора, где его пробуют первым. Каждый раз, когда он отвечает, запрос уходит на серверы Private Cloud Compute Apple. Запрос — это ваш вопрос или фоновая задача (например, обзор, ответ на запись дневника или определение категории чека) и записи, которые приложение добавляет в контекст; среди них могут быть текст дневника, отметки, настроение, траты, еда и значения из «Здоровья». По заявлению Apple, эти данные используются только для ответа, не хранятся и недоступны самой Apple. Мы их никогда не получаем. Выключить Private Cloud Compute можно в любой момент в разделе Профиль → ИИ.</li>
-</ul>
-<p>ИИ также может обращаться к справочной библиотеке внутри приложения: руководствам по практическим навыкам и первой помощи, которые находятся в общественном достоянии, и заметкам на те же темы, написанным нашими словами. Поиск по ней идёт на устройстве. Ответы ИИ — это общая информация, а не медицинский совет.</p>
-
-<h2>Когда приложение выходит в сеть</h2>
-<div class="table-wrap"><table>
-  <tr><th>Когда</th><th>Куда</th><th>Что уходит</th></tr>
-  <tr><td>Вы нажали «Скачать модель» для Übermensch AI или исходной LFM2.5</td><td data-label="Куда">Hugging Face (huggingface.co и его серверы загрузки)</td><td data-label="Что уходит">Запрос публичных файлов модели из <code>Robochopacho/LFM2.5-2.6B-Ubermensch-v1-MLX-8bit</code> (Übermensch AI) или <code>LiquidAI/LFM2.5-2.6B-MLX-8bit</code> (исходная LFM2.5). Как и любая загрузка, он раскрывает ваш IP-адрес, версию приложения и то, какие файлы вы скачиваете. Ни аккаунта, ни идентификаторов, ни ваших записей. Журналы серверов Hugging Face регулирует его собственная политика конфиденциальности.</td></tr>
-  <tr><td>Private Cloud Compute включён и отвечает на запрос</td><td data-label="Куда">Apple Private Cloud Compute</td><td data-label="Что уходит">Запрос и записи из контекста, как описано выше.</td></tr>
-  <tr><td>Вы включили «Искать неизвестные штрихкоды онлайн» (Профиль → Приватность и данные → Штрихкоды; по умолчанию выключено) и сканируете штрихкод, которого нет во встроенной базе</td><td data-label="Куда">Open Food Facts (world.openfoodfacts.org)</td><td data-label="Что уходит">Только номер штрихкода, а также название и версия приложения и контактный адрес разработчика — их Open Food Facts просит передавать каждое приложение. Ваш IP-адрес виден, как при любом запросе. Без идентификаторов и без ваших записей.</td></tr>
-  <tr><td>Вы впервые диктуете на каком-то языке</td><td data-label="Куда">Apple</td><td data-label="Что уходит">iOS скачивает речевую модель Apple для этого языка. Ни звука, ни текста, ни ваших записей.</td></tr>
-  <tr><td>Приложение запускается (спрашивает у App Store цены Pro и есть ли у вас покупка), или вы покупаете, восстанавливаете Übermensch Pro либо управляете подпиской</td><td data-label="Куда">Apple App Store</td><td data-label="Что уходит">Всё делает Apple. Мы не видим ни вашу карту, ни ваш Apple Account; Apple присылает нам только сводные отчёты о продажах.</td></tr>
-  <tr><td>Вы нажали «Написать разработчику» или открыли ссылку</td><td data-label="Куда">Ваша почта или браузер</td><td data-label="Что уходит">Только то, что вы сами решите отправить.</td></tr>
-</table></div>
-<p id="barcode-ru">Поиск по штрихкоду, поиск еды и упражнений, диктовка, распознавание чеков и фото еды работают без интернета, на данных, встроенных в приложение. База штрихкодов (USDA FoodData Central и Open Food Facts) поставляется внутри приложения. Если вы не скачиваете модель, не включаете Private Cloud Compute и онлайн-поиск штрихкодов, приложение само не делает ни одного сетевого запроса, кроме запроса цен Pro к App Store при запуске. Кроме того, при первой диктовке iOS может скачать речевую модель Apple.</p>
-
-<h2>Покупки</h2>
-<p>Übermensch Pro продаётся через App Store на месяц, на год (годовой тариф начинается с двух бесплатных недель, если ваш Apple Account на них имеет право) или навсегда одним платежом. Подписка продлевается, пока вы не отмените её в настройках Apple Account; их открывает Профиль → Übermensch Pro → «Управлять подпиской». Платёж обрабатывает Apple по своей политике конфиденциальности. Приложение проверяет покупку или подписку на устройстве через StoreKit Apple, и платёжных данных мы не получаем. Чтобы получить Pro на новом iPhone, войдите в тот же Apple Account и нажмите в приложении «Восстановить покупки».</p>
-
-<h2>Чего мы не делаем</h2>
-<ul>
-  <li>Никакой рекламы и рекламных SDK.</li>
-  <li>Никакого трекинга: ни рекламного идентификатора, ни снятия цифровых отпечатков, ни брокеров данных.</li>
-  <li>Никаких SDK аналитики и сбора сбоев (Firebase, Mixpanel, Amplitude, Sentry и подобных).</li>
-  <li>Никаких SDK соцсетей, никакой слежки за геолокацией (округлённая позиция для светового дня — единственное использование геолокации, и только если вы это включили), никакого доступа к контактам.</li>
-  <li>Никакой продажи или передачи персональных данных.</li>
-</ul>
-
-<h2>Ваши инструменты</h2>
-<ul>
-  <li><strong>Посмотреть, что хранится:</strong> Профиль → Приватность и данные.</li>
-  <li><strong>Изменить или удалить отдельную запись:</strong> прямо в самой записи.</li>
-  <li><strong>Экспорт:</strong> Профиль → Приватность и данные → Экспорт — Markdown, JSON или полный файл данных; с Übermensch Pro ещё годовой лист для печати (PDF). Экспорт покидает приложение, только когда вы сами им делитесь.</li>
-  <li><strong>Переезд на новый iPhone:</strong> экспортируйте файл данных, затем на новом телефоне откройте Профиль → Приватность и данные → Восстановить → Импортировать файл данных. Обычный перенос iPhone или восстановление из резервной копии тоже переносит данные.</li>
-  <li><strong>Удалить всё:</strong> Профиль → Приватность и данные → Удалить все данные. Стираются все записи, фото дневника, добавленные вами книги и инструкции, страховочные копии базы и записи приложения в Spotlight. Скачанные модели ИИ остаются — их можно удалить в разделе Профиль → ИИ. Удаление приложения тоже стирает все его данные с устройства. Сделанные вами экспорты и резервные копии остаются под вашим контролем.</li>
-  <li><strong>Доступ к «Здоровью»:</strong> Настройки iOS → Конфиденциальность и безопасность → Здоровье → Übermensch. Значения, которые приложение записало в «Здоровье», остаются там, пока вы не удалите их в самом «Здоровье».</li>
-  <li><strong>Private Cloud Compute:</strong> Профиль → ИИ. <strong>Онлайн-поиск штрихкодов:</strong> Профиль → Приватность и данные → Штрихкоды. <strong>Уведомления:</strong> Настройки iOS → Уведомления → Übermensch.</li>
-</ul>
-
-<h2>Ваши права</h2>
-<p>В зависимости от того, где вы живёте (например, по GDPR, UK GDPR или законам Калифорнии), у вас есть право на доступ к персональным данным, их исправление и удаление, а также право возразить против их обработки. Ваши данные из приложения к нам не попадают, поэтому у нас их нет, и эти права вы осуществляете прямо в приложении с помощью инструментов выше. Если хотите, чтобы мы удалили присланное вами письмо, напишите — удалим. Вы также можете подать жалобу в местный орган по защите данных. Мы не продаём и не передаём персональную информацию.</p>
-
-<h2>Данные о здоровье потребителей</h2>
-<p>Мы не собираем, не передаём и не продаём данные о здоровье потребителей. Записанная вами информация о здоровье обрабатывается приложением на вашем устройстве. Если вы включили Private Cloud Compute, Apple обрабатывает нужную часть этой информации только для ответа на запрос.</p>
-
-<h2>Дети</h2>
-<p>Übermensch предназначен для взрослых и не ориентирован на детей. Мы сознательно не собираем персональные данные ни у кого: у приложения нет сервера, на который их можно было бы собрать.</p>
-
-<h2 id="ru-contact">Связь с нами</h2>
-<p>Пишите на <a href="mailto:chemodanclan95@gmail.com">chemodanclan95@gmail.com</a>. Кнопка «Написать разработчику» в разделе Профиль → О приложении и поддержка открывает письмо, в котором уже указаны версия приложения, модель iPhone, версия iOS, модель ИИ и язык приложения: так проще воспроизвести проблему. Эти строки можно изменить или удалить перед отправкой. Ваши записи к письму не прикладываются. Письмо мы используем только для ответа, по вашему запросу (GDPR, ст. 6(1)(b) и (f)), и удаляем его по вашей просьбе.</p>
-
-<h2>Изменения</h2>
-<p>Если изменится то, как приложение обращается с данными, эта страница будет обновлена с новой датой, а существенные изменения появятся в примечаниях к выпуску.</p>
-
-</article>
-
-<div class="footer">© 2026 Oleksandr Konorev · <a href="support.html">Support / Поддержка</a></div>
+<div class="footer">© 2026 Oleksandr Konorev · <a href="support.html">Support</a></div>
 
 </main>
 </body>

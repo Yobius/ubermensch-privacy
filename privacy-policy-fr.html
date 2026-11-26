@@ -4,114 +4,112 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Übermensch — Politique de confidentialité</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#E4ECF5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11161F" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <style>
     :root {
-      --paper: #ECE7D9;
-      --ink: #18171C;
-      --rule: rgba(24,23,28,0.18);
-      --muted: rgba(24,23,28,0.55);
-      --accent: #B12B1B;
-      --display: 'Fraunces', Georgia, serif;
-      --serif: 'Newsreader', Georgia, serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color-scheme: light dark;
+      --ground: #E4ECF5; --ink: #151B24; --dim: #474E58; --faint: #5D646F;
+      --sheet: rgba(249,252,255,.76); --hi: rgba(255,255,255,.8); --hair: rgba(62,72,88,.18); --shadow: rgba(52,70,98,.3);
+      --amber: #FAB72A; --on-amber: #151B24; --link: #8C4A00; --code: rgba(62,72,88,.09);
+      --sleep: #3778D7; --money: #2E9E52; --mood: #9F55BE; --field: 46%;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ground: #11161F; --ink: #EAEFF5; --dim: #AEB9C4; --faint: #8993A0;
+        --sheet: rgba(28,34,45,.74); --hi: rgba(255,255,255,.07); --hair: rgba(218,223,229,.15); --shadow: rgba(3,6,12,.7);
+        --link: #FAB72A; --code: rgba(218,223,229,.1);
+        --sleep: #5F99ED; --money: #5BBD74; --mood: #BB79D7; --field: 32%;
+      }
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     html, body { margin: 0; padding: 0; }
     body {
-      background: var(--paper);
+      background: var(--ground);
       color: var(--ink);
-      font-family: var(--serif);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 17px;
       line-height: 1.6;
-      padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 56px);
+      -webkit-font-smoothing: antialiased;
+      padding: 14px max(16px, env(safe-area-inset-right)) clamp(40px, 6vw, 80px) max(16px, env(safe-area-inset-left));
     }
-    main { max-width: 720px; margin: 0 auto; }
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(62vmax 52vmax at 0% 0%, color-mix(in oklab, var(--sleep) var(--field), transparent), transparent 70%),
+        radial-gradient(56vmax 46vmax at 100% 4%, color-mix(in oklab, var(--amber) var(--field), transparent), transparent 70%),
+        radial-gradient(62vmax 52vmax at 100% 100%, color-mix(in oklab, var(--mood) var(--field), transparent), transparent 70%),
+        radial-gradient(50vmax 46vmax at 0% 88%, color-mix(in oklab, var(--money) calc(var(--field) * .7), transparent), transparent 70%),
+        var(--ground);
+    }
+    .top, main { max-width: 780px; margin-left: auto; margin-right: auto; }
+    .top {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      min-height: 58px; padding: 0 8px 0 12px; margin-bottom: 14px; border-radius: 999px;
+      background: var(--sheet); border: 1px solid var(--hair);
+      -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5);
+      box-shadow: inset 0 1px 0 var(--hi), 0 18px 44px -28px var(--shadow);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; color: var(--ink); text-decoration: none; border: 0; }
+    .brand img { width: 30px; height: 30px; border-radius: 8px; display: block; }
+    .cross { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 999px; background: var(--amber); color: var(--on-amber); font-weight: 700; font-size: 15px; text-decoration: none; border: 0; white-space: nowrap; }
+    main {
+      background: var(--sheet); border: 1px solid var(--hair); border-radius: clamp(22px, 4vw, 32px);
+      padding: clamp(24px, 5vw, 56px) clamp(20px, 5vw, 56px);
+      -webkit-backdrop-filter: blur(26px) saturate(1.5); backdrop-filter: blur(26px) saturate(1.5);
+      box-shadow: inset 0 1px 0 var(--hi), 0 30px 70px -40px var(--shadow);
     }
     h1 {
-      font-family: var(--display);
-      font-weight: 200;
-      font-size: clamp(40px, 6vw, 80px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 0 0 12px;
+      font-weight: 700; font-size: clamp(30px, 7vw, 54px); line-height: 1.04; letter-spacing: -.03em;
+      margin: 0 0 12px; text-wrap: balance; hyphens: auto; overflow-wrap: break-word;
     }
-    .updated {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 56px;
+    h1 em { font-style: normal; color: var(--faint); }
+    .updated { font-size: 14.5px; color: var(--dim); margin-bottom: 22px; }
+    .lang { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 36px; }
+    .lang a {
+      display: inline-flex; align-items: center; min-height: 40px; padding: 0 15px; border-radius: 999px;
+      border: 1px solid var(--hair); color: var(--dim); font-size: 14.5px; font-weight: 600; text-decoration: none;
     }
-    h2 {
-      font-family: var(--display);
-      font-weight: 300;
-      font-size: 28px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin: 56px 0 16px;
-    }
-    h3 {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 32px 0 12px;
-    }
-    p { margin: 0 0 16px; }
-    ul { padding-left: 24px; margin: 0 0 16px; }
+    .lang a[aria-current] { background: var(--amber); border-color: transparent; color: var(--on-amber); }
+    h2 { font-weight: 700; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.18; letter-spacing: -.02em; margin: 48px 0 14px; text-wrap: balance; }
+    h3 { font-size: 13px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); margin: 30px 0 10px; }
+    p { margin: 0 0 16px; text-wrap: pretty; }
+    ul, ol { padding-left: 24px; margin: 0 0 16px; }
     li { margin-bottom: 8px; }
-    em { font-family: var(--display); font-style: italic; }
-    code, .api {
-      font-family: var(--mono);
-      font-size: 0.92em;
-      background: rgba(24,23,28,0.05);
-      padding: 1px 6px;
-      border-radius: 3px;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      margin: 56px 0;
-    }
-    .footer {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 56px;
-    }
-    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
-    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
-    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--rule); }
-    th { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
-    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .lang { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; margin: -32px 0 48px; }
+    li::marker { color: var(--faint); }
+    em { font-style: italic; }
+    strong, b { font-weight: 600; }
+    code, .api { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; background: var(--code); padding: 1px 6px; border-radius: 6px; }
     code { word-break: break-all; }
+    hr { border: 0; border-top: 1px solid var(--hair); margin: 48px 0; }
+    a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--hair); }
+    th { font-size: 12.5px; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .footer { font-size: 14px; color: var(--dim); margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--hair); }
     @media (max-width: 600px) {
       .table-wrap tr:first-child { display: none; }
       .table-wrap tr, .table-wrap td { display: block; }
-      .table-wrap tr { border-top: 1px solid var(--rule); padding: 12px 0; }
+      .table-wrap tr { border-top: 1px solid var(--hair); padding: 12px 0; }
       .table-wrap td { border: 0; padding: 2px 0; }
       .table-wrap td:first-child { font-weight: 600; }
-      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+      .table-wrap td[data-label]::before { content: attr(data-label); display: block; margin-top: 8px; font-size: 12px; letter-spacing: .02em; text-transform: uppercase; color: var(--faint); }
     }
   </style>
 </head>
 <body>
+<header class="top"><a class="brand" href="https://yobius.github.io/ubermensch-site/"><img src="icon.png" alt="" width="30" height="30">Übermensch</a><a class="cross" href="support-fr.html">Assistance</a></header>
 <main>
 
-<div class="eyebrow">§ PRIVACIA</div>
-<h1>Le miroir est <em>local.</em></h1>
+<h1>Politique de <em>confidentialité.</em></h1>
 <div class="updated">Dernière mise à jour : 24 novembre 2026 · Übermensch pour iPhone (iOS 27)</div>
-<nav class="lang"><a href="https://yobius.github.io/ubermensch-privacy/">English</a> · <a href="support-fr.html">Assistance</a></nav>
+<nav class="lang" aria-label="Langue"><a href="index.html" lang="en">English</a><a href="privacy-policy-de.html" lang="de">Deutsch</a><a href="privacy-policy-fr.html" aria-current="page" lang="fr">Français</a><a href="privacy-policy-es.html" lang="es">Español</a><a href="privacy-policy-it.html" lang="it">Italiano</a></nav>
 
 <article id="fr" lang="fr">
 
